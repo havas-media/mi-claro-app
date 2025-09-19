@@ -1,12 +1,20 @@
 ---
 import Layout from '@layouts/Layout.astro';
-import Button from "@UI/Button.astro"
+import QueEs from "@components/QueEs.astro"
+import Descarga from "@components/Descarga.astro"
+import Ingresar from "@components/Ingresar.astro"
+import Sorteo from "@components/Sorteo.astro"
+import Ganadores from "@components/Ganadores.astro"
+import Consultas from "@components/Consultas.astro"
+import InternaClaroApp from "@components/InternaClaroApp.astro"
 ---
 
 <Layout title='Prepago chévere'>
-	<div class="grid gap-2 container">
-		<Button as="a" href="https://www.claro.com.pe/personas/app/claro-musica/" classes="min-w-fit" >Saber más</Button>
-		<Button classes="min-w-fit cursor-pointer" type="submit" >Boton submit</Button>
-		<Button disabled classes="min-w-fit">Boton</Button>
-	</div>
+	<QueEs />
+	<Descarga />
+	<Ingresar />
+	<Sorteo />
+	<Ganadores />
+	<Consultas />
+	<!-- <InternaClaroApp /> -->
 </Layout>

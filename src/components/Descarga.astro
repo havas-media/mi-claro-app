@@ -1,0 +1,298 @@
+---
+
+---
+
+<!-- DOWNLOAD -->
+<section class="download">
+  <div class="background-img">
+    <img
+      src="https://www.claro.com.pe/assets/havas/claro-app/assets/background-descargar.png"
+    />
+  </div>
+
+  <div class="container">
+    <div class="download-description">
+      <h2>Tu Claro App, todo lo que necesitas en solo 3 simples clics</h2>
+
+      <div class="donwload-icons">
+        <div class="download-icon">
+          <img
+            src="https://www.claro.com.pe/assets/havas/claro-app/assets/descargas.png"
+            alt="Icon de Descarga"
+          />
+          <p>Descárgala</p>
+        </div>
+
+        <div class="download-icon">
+          <img
+            src="https://www.claro.com.pe/assets/havas/claro-app/assets/registratev2.png"
+            alt="Icon de Registrate"
+          />
+          <p>Regístrate</p>
+        </div>
+
+        <div class="download-icon">
+          <img
+            src="https://www.claro.com.pe/assets/havas/claro-app/assets/usarv2.png"
+            alt="Icon de Registrate"
+          />
+          <p>Usa tu App</p>
+        </div>
+      </div>
+
+      <p>Si aún no la haz descargado, <a href="#">haz click aquí</a></p>
+
+      <div class="download-store">
+        <a href="https://miclaroapplication.page.link/home_varios">
+          <img
+            src="https://www.claro.com.pe/assets/havas/claro-app/assets/app-store.png"
+            alt="Icon App Store"
+          />
+        </a>
+        <a href="https://miclaroapplication.page.link/home_varios">
+          <img
+            src="https://www.claro.com.pe/assets/havas/claro-app/assets/google-play.png"
+            alt="Icon Google Play"
+          />
+        </a>
+        <a href="https://miclaroapplication.page.link/home_varios">
+          <img
+            src="https://www.claro.com.pe/assets/havas/claro-app/assets/app-gallery.png"
+            alt="Icon AppGallery"
+          />
+        </a>
+      </div>
+    </div>
+
+    <div class="download-img">
+      <img
+        src="https://www.claro.com.pe/assets/havas/claro-app/assets/phone-app-desktop.png"
+        alt="Phone"
+      />
+      <a class="btn-download" href="#">Descargar App</a>
+    </div>
+  </div>
+</section>
+
+<style>
+  /*#region DOWNLOAD */
+  .download {
+    position: relative;
+
+    padding: 80px 0;
+    overflow: hidden;
+  }
+  @media (min-width: 768px) {
+    .download {
+      padding: 80px 0 30px;
+    }
+  }
+
+  .download .background-img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+
+  .download .background-img img {
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    min-height: 100%;
+    min-width: 100%;
+    object-fit: cover;
+    height: auto;
+  }
+
+  .download .container {
+    position: relative;
+
+    display: flex;
+    flex-direction: column;
+  }
+
+  @media (min-width: 768px) {
+    .download .container {
+      flex-direction: row;
+    }
+  }
+
+  @media (min-width: 1024px) {
+    .download .container {
+      justify-content: space-between;
+    }
+
+    .download .download-description {
+      flex-basis: calc(50% - 20px);
+    }
+  }
+
+  .download .download-description h2 {
+    margin-bottom: 35px;
+
+    font-family: AMX;
+    font-size: 24px;
+    font-weight: 700;
+    color: #ffffff;
+    line-height: 1.5;
+  }
+
+  @media (min-width: 768px) {
+    .download .download-description h2 {
+      margin-bottom: 50px;
+    }
+  }
+
+  @media (min-width: 1024px) {
+    .download .download-description h2 {
+      font-size: 32px;
+    }
+  }
+
+  .download .download-description .donwload-icons {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    gap: 10px;
+  }
+
+  @media (min-width: 768px) {
+    .download .download-description .donwload-icons {
+      justify-content: flex-start;
+
+      gap: 50px;
+    }
+  }
+
+  .download-description .donwload-icons .download-icon {
+    flex-basis: 30%;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+
+    margin-bottom: 20px;
+  }
+
+  @media (min-width: 768px) {
+    .download-description .donwload-icons .download-icon {
+      flex-basis: auto;
+
+      gap: 10px;
+    }
+  }
+
+  .donwload-icons .download-icon img {
+    width: 48px;
+    height: 48px;
+  }
+
+  .donwload-icons .download-icon > p {
+    font-family: Roboto;
+    font-size: 14px;
+    font-weight: 700;
+    color: #ffffff;
+  }
+
+  @media (min-width: 768px) {
+    .donwload-icons .download-icon > p {
+      font-size: 16px;
+    }
+  }
+
+  @media (min-width: 1024px) {
+    .donwload-icons .download-icon > p {
+      font-size: 18px;
+    }
+  }
+
+  .download .download-description > p {
+    display: none;
+    visibility: hidden;
+  }
+
+  .download .download-description .download-store {
+    display: none;
+    visibility: hidden;
+  }
+
+  @media (min-width: 768px) {
+    .download .download-description > p {
+      display: block;
+      visibility: visible;
+
+      font-family: Roboto;
+      font-size: 16px;
+      font-weight: 400;
+      color: white;
+      margin-top: 25px;
+    }
+
+    .download .download-description > p a {
+      color: #2fbcc4;
+    }
+
+    .download .download-description .download-store {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+
+      margin-top: 30px;
+      visibility: visible;
+    }
+  }
+
+  @media (min-width: 1024px) {
+    .download .download-img {
+      flex-basis: calc(50% - 20px);
+    }
+  }
+
+  .download .download-img img {
+    margin: auto;
+  }
+
+  .download .download-img .btn-download {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 227px;
+    height: 40px;
+    margin: auto;
+    border-radius: 24px;
+    box-shadow:
+      0 4px 16px 0 rgba(131, 23, 15, 0.74),
+      0 -4px 10px 0 rgba(45, 45, 45, 0.6) inset,
+      4px 4px 14px 0 rgba(255, 255, 255, 0.4) inset;
+
+    font-family: Roboto;
+    font-size: 16px;
+    font-weight: 700;
+    color: #ffffff;
+    text-decoration: none;
+
+    background: var(
+      --gradientes-rojo-600800-diagonal,
+      linear-gradient(
+        103deg,
+        var(--Rojo-Rojo-600, #da291c) 0%,
+        var(--Rojo-Rojo-800, #b52217) 100%
+      )
+    );
+  }
+
+  @media (min-width: 768px) {
+    .download .download-img .btn-download {
+      display: none;
+      visibility: hidden;
+    }
+  }
+  /*#endregion */
+</style>

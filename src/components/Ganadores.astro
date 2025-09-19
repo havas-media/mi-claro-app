@@ -1,0 +1,152 @@
+---
+
+---
+
+<!-- GANADORES -->
+<section class="ganadores container">
+  <div class="background-img">
+      <img  src="https://www.claro.com.pe/assets/havas/claro-app/assets/background-banner.png">
+  </div>
+
+  <div class="ganadores-description">
+      <img src="https://www.claro.com.pe/assets/havas/claro-app/assets/ganadores-icon.png" alt="Icon de Ganadores">
+
+      <div class="ganadores-description_content">
+          <p>Felicitaciones</p>
+          <h2>Ganadores del sorteo de mayo</h2>
+      </div>
+  </div>
+
+  <a href="#">Conócelos aquí</a>
+</section>
+
+<style>
+  /*#region GANADORES */
+  .ganadores {
+    position: relative;
+
+    display: flex;
+    flex-direction: column;
+
+    padding: 50px;
+    margin-bottom: 40px;
+  }
+
+  @media (min-width: 800px) {
+    .ganadores {
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-between;
+      
+      padding: 50px 70px;
+      margin-bottom: 60px;
+    }
+  }
+
+  .ganadores .background-img {
+    position: absolute;
+    top: 0;
+    left: 20px;
+    right: 20px;
+    height: 100%;
+    
+  }
+
+  .ganadores .background-img img {
+      width: 100%;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      min-height: 100%;
+      min-width: 100%;
+      border-radius: 24px;
+      object-fit: cover;
+      height: auto;
+  }
+
+  .ganadores .ganadores-description {
+    position: relative;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  @media (min-width: 800px) {
+    .ganadores .ganadores-description {
+      flex-direction: row;
+    }
+  }
+
+  .ganadores .ganadores-description img {
+    margin-bottom: 24px;
+  }
+
+  @media (min-width: 800px) {
+    .ganadores .ganadores-description img  {
+      margin-bottom: 0;
+      margin-right: 32px;
+    }
+  }
+
+  .ganadores .ganadores-description p {
+    font-family: Roboto;
+    font-size: 16px;
+    font-weight: 400;
+    text-transform: uppercase;
+    text-align: center;
+    color: #FFFFFF;
+  }
+
+  @media (min-width: 800px) {
+    .ganadores .ganadores-description p {
+      text-align: left;
+    }
+  }
+
+  .ganadores .ganadores-description h2 {
+    margin-top: 5px;
+
+    font-family: AMX;
+    font-size: 24px;
+    font-weight: 700;
+    text-align: center;
+    color: #fff;
+    line-height: normal;
+  }
+
+  @media (min-width: 800px) {
+    .ganadores .ganadores-description h2 {
+      text-align: left;
+    }
+  }
+
+  .ganadores > a {
+    position: relative;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 200px;
+    height: 40px;
+    margin: auto;
+    margin-top: 24px;
+    padding: 12px;
+    border-radius: 24px;
+    border: 1.5px solid ;
+
+    text-decoration: none;
+    color: #FFF;
+  }
+
+  @media (min-width: 800px) {
+    .ganadores > a {
+      margin: 0;
+      margin-top: 0;
+    }
+  }
+
+  /*#endregion */
+</style>

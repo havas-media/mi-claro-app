@@ -30,3 +30,51 @@
   --swiper-navigation-color: #DE187D;
   --swiper-pagination-color: #DA291C;
 }
+
+
+/* Slick Dots */
+.phone-steps .slick-dots {
+  bottom: 0;
+  display: flex !important;
+  justify-content: center;
+  align-items: center;
+  list-style: none;
+  position: relative;
+  padding-top: 26px;
+}
+
+.phone-steps .slick-dots li {
+  margin: 0 4px;
+}
+
+.phone-steps .slick-dots li button {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: #dee2e6;
+  border: none;
+  font-size: 0;
+  transition: all 0.3s ease;
+  padding: 0;
+}
+
+.phone-steps .slick-dots li button:before {
+  display: none;
+}
+
+.phone-steps .slick-dots li.slick-active button {
+  background: #DA272D;
+  width: 12px;
+  height: 12px;
+}
+
+.phone-steps .slick-dots.hidden {
+  display: none !important;
+  visibility: hidden;
+}
+
+/* Hide slick default arrows */
+.registration-section .slick-prev,
+.registration-section .slick-next {
+  display: none !important;
+}

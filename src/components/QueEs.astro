@@ -1,0 +1,318 @@
+---
+
+---
+
+<!-- ABOUT -->
+<section class="about container">
+  <div class="about-img">
+    <h2>¿Qué es Mi Claro App?</h2>
+    <p>
+      Tu canal de autoatención en línea para gestionar tus servicios móviles y
+      Claro Hogar. Realiza consultas y operaciones desde tu PC, celular o
+      tablet, sin necesidad de salir de casa.
+    </p>
+    <img
+      src="https://www.claro.com.pe/assets/havas/claro-app/assets/phone.png"
+      alt="Celular About"
+    />
+  </div>
+
+  <div class="about-description">
+    <div class="about-description_text">
+      <h2>¿Qué es Mi Claro App?</h2>
+      <p>
+        Tu canal de autoatención en línea para gestionar tus servicios móviles y
+        Claro Hogar. Realiza consultas y operaciones desde tu PC, celular o
+        tablet, sin necesidad de salir de casa.
+      </p>
+    </div>
+
+    <div class="about-description_links">
+      <a class="btn-link" href="#">
+        <img
+          src="https://www.claro.com.pe/assets/havas/claro-app/assets/consulta.png"
+        />
+        <p>Consulta tu plan y consumos</p>
+        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path
+            d="M5 12H19M19 12L12 5M19 12L12 19"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"></path>
+        </svg>
+      </a>
+      <a class="btn-link" href="#">
+        <img
+          src="https://www.claro.com.pe/assets/havas/claro-app/assets/carrito.png"
+        />
+        <p>Compra de paquetes y recargas</p>
+        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path
+            d="M5 12H19M19 12L12 5M19 12L12 19"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"></path>
+        </svg>
+      </a>
+      <a class="btn-link" href="#">
+        <img
+          src="https://www.claro.com.pe/assets/havas/claro-app/assets/recibos.png"
+        />
+        <p>Pago de recibos móviles y Claro Hogar</p>
+        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path
+            d="M5 12H19M19 12L12 5M19 12L12 19"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"></path>
+        </svg>
+      </a>
+      <a class="btn-link" href="#">
+        <img
+          src="https://www.claro.com.pe/assets/havas/claro-app/assets/afiliate.png"
+        />
+        <p>Afiliarte al débito automático</p>
+        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path
+            d="M5 12H19M19 12L12 5M19 12L12 19"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"></path>
+        </svg>
+      </a>
+      <a class="btn-link" href="#">
+        <img
+          src="https://www.claro.com.pe/assets/havas/claro-app/assets/home.png"
+        />
+        <p>Gestión de servicios Claro Hogar</p>
+        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path
+            d="M5 12H19M19 12L12 5M19 12L12 19"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"></path>
+        </svg>
+      </a>
+      <a class="btn-link" href="#">
+        <img
+          src="https://www.claro.com.pe/assets/havas/claro-app/assets/visualizacion-recibos.png"
+        />
+        <p>Visualización de recibos pagados</p>
+        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path
+            d="M5 12H19M19 12L12 5M19 12L12 19"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"></path>
+        </svg>
+      </a>
+    </div>
+
+    <a class="btn-about" href="#">Explorar funciones</a>
+  </div>
+</section>
+
+<style>
+  /*#region ABOUT */
+  .about {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
+
+  @media (min-width: 1024px) {
+    .about {
+      flex-direction: row;
+    }
+  }
+
+  .about .about-img {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    padding: 20px 0;
+  }
+
+  @media (min-width: 1024px) {
+    .about .about-img {
+      flex-basis: 40%;
+    }
+  }
+
+  .about .about-img h2 {
+    align-self: flex-start;
+
+    font-size: 24px;
+    font-family: AMX;
+    color: #3c3c3c;
+    font-weight: 700;
+  }
+
+  .about .about-img p {
+    margin-bottom: 3px;
+
+    font-family: Roboto;
+    font-size: 16px;
+    line-height: 1.4;
+    color: #6c6c6c;
+  }
+
+  @media (min-width: 1024px) {
+    .about .about-img h2,
+    .about .about-img p {
+      display: none;
+      visibility: hidden;
+    }
+
+    .about .about-img img {
+      max-height: 520px;
+    }
+  }
+
+  .about .about-description {
+    display: flex;
+    flex-direction: column-reverse;
+    gap: 28px;
+
+    padding: 20px 0;
+  }
+
+  @media (min-width: 1024px) {
+    .about .about-description {
+      flex-basis: 60%;
+      flex-direction: column;
+    }
+  }
+
+  .about .about-description .about-description_text {
+    display: none;
+    visibility: hidden;
+  }
+
+  @media (min-width: 1024px) {
+    .about .about-description .about-description_text {
+      display: block;
+      visibility: visible;
+    }
+
+    .about-description .about-description_text h2 {
+      font-family: AMX;
+      font-size: 32px;
+      font-weight: 700;
+      color: #3c3c3c;
+      margin-bottom: 20px;
+    }
+
+    .about-description .about-description_text p {
+      margin-bottom: 3px;
+
+      font-family: Roboto;
+      font-size: 16px;
+      line-height: 1.4;
+      color: #6c6c6c;
+    }
+  }
+
+  .about .about-description .btn-about {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 227px;
+    height: 40px;
+    margin: auto;
+    border-radius: 24px;
+
+    background: linear-gradient(
+      90deg,
+      rgba(218, 41, 28, 1) 0%,
+      rgba(181, 34, 23, 1) 100%
+    );
+    box-shadow:
+      0 4px 16px 0 rgba(131, 23, 15, 0.74),
+      0 -4px 10px 0 rgba(45, 45, 45, 0.6) inset,
+      4px 4px 14px 0 rgba(255, 255, 255, 0.4) inset;
+    color: #fff;
+    font-family: Roboto;
+    font-size: 16px;
+    text-decoration: none;
+  }
+
+  @media (min-width: 1024px) {
+    .about .about-description .btn-about {
+      margin: inherit;
+    }
+  }
+
+  .about .about-description .about-description_links {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 18px;
+  }
+
+  .about-description .about-description_links .btn-link {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 4px 16px 0 rgba(60, 60, 60, 0.12);
+
+    text-decoration: none;
+    width: 100%;
+    transition: 0.5s ease;
+  }
+
+  @media (min-width: 1024px) {
+    .about-description .about-description_links .btn-link {
+      width: calc(50% - 10px);
+    }
+  }
+
+  .about-description .about-description_links .btn-link:hover {
+    box-shadow: 0 4px 16px 0 rgba(60, 60, 60, 0.2);
+    transform: translateY(-3px);
+  }
+
+  .about-description_links .btn-link img {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    flex-basis: calc(32px);
+
+    width: 32px;
+    height: 32px;
+  }
+
+  .about-description_links .btn-link p {
+    flex: 1;
+    margin: 0 15px;
+
+    font-size: 16px;
+    color: #3c3c3c;
+    font-weight: 700;
+  }
+
+  .about-description_links .btn-link svg {
+    flex-basis: calc(16px);
+
+    color: #3c3c3c;
+    width: 16px !important;
+    height: 16px !important;
+  }
+  /*#endregion */
+</style>

@@ -1,0 +1,822 @@
+---
+import billeteraDigitalIcon from "@/assets/billetera-digital-icon.png";
+import tarjetaIcon from "@/assets/tarjeta-icon.png";
+import billetera_01 from "@/assets/billetera-1.png";
+import googlePlay from "@/assets/googleplay.png";
+import huawei from "@/assets/huawei.png";
+import appStore from "@/assets/appstore.png";
+import qrApp from "@/assets/qr-app.jpg";
+---
+
+<section class="claro-recibos">
+  <div class="container">
+    <h2>Claro Hogar y recibos móviles</h2>
+
+    <div class="recibos-section">
+      <!-- Tabs -->
+      <div class="tabs-container">
+        <div class="tabs-wrapper">
+          <button class="tab-button active" data-tab="billetera_digital">
+            <img src={billeteraDigitalIcon.src} alt="Icono de billetera" />
+            Paga con billetera digital
+          </button>
+          <button class="tab-button" data-tab="interbank">
+            <img src={tarjetaIcon.src} alt="Icono de tarjeta" />
+            Paga con tarjeta
+          </button>
+        </div>
+      </div>
+
+      <!-- Billetera Digital Content -->
+      <div class="tab-content">
+        <!-- Contenedor del Tutorial -->
+        <div class="billetera-digital-container">
+          <div class="tutorial-image">
+            <img src={billetera_01.src} alt="Tutorial paso" id="tutorial-img" />
+          </div>
+          <div class="tutorial-info">
+            <div class="tutorial-content">
+              <div class="tutorial-content_info">
+                <div class="tutorial-pagination">
+                  <span class="current-step">1</span>
+                  de
+                  <span class="total-steps">4</span>
+                  pasos
+                </div>
+                <p id="tutorial-description">
+                  Ingresa a Mi Claro App en tu servicio postpago o Claro Hogar y
+                  selecciona el ícono
+                </p>
+
+                <div class="tutorial-controls">
+                  <button class="tutorial-prev disabled" id="tutorial-prev">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="18"
+                      height="18"
+                      viewBox="0 0 18 18"
+                      fill="none"
+                    >
+                      <path
+                        d="M16 9.16089H2M2 9.16089L9 2.16089M2 9.16089L9 16.1609"
+                        stroke="#3C3C3C"
+                        stroke-width="3"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"></path>
+                    </svg>
+                  </button>
+
+                  <button class="tutorial-next" id="tutorial-next">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="18"
+                      height="18"
+                      viewBox="0 0 18 18"
+                      fill="none"
+                    >
+                      <path
+                        d="M2 9.16089H16M16 9.16089L9 2.16089M16 9.16089L9 16.1609"
+                        stroke="#3C3C3C"
+                        stroke-width="3"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"></path>
+                    </svg>
+                  </button>
+                </div>
+              </div>
+
+              <div class="tutorial-qr">
+                <div class="tutorial-qr_apps">
+                  <div class="qr-app">
+                    <p>Googleplay</p>
+                    <img src={googlePlay.src} alt="QR Googleplay" />
+                  </div>
+
+                  <div class="qr-app">
+                    <p>Huawei</p>
+                    <img src={huawei.src} alt="QR Huawei" />
+                  </div>
+
+                  <div class="qr-app">
+                    <p>Appstore</p>
+                    <img src={appStore.src} alt="QR Appstore" />
+                  </div>
+                </div>
+
+                <div class="tutorial-qr_img">
+                  <img src={qrApp.src} />
+                </div>
+
+                <div class="tutorial-qr_description">
+                  <h3>Mi Claro APP</h3>
+                  <p>Escanea el código <br />y descarga la app</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  /*#region CLARO RECIBOS*/
+  .claro-recibos {
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
+
+  .claro-recibos h2 {
+    font-size: 24px;
+    font-family: AMX;
+    color: #3c3c3c;
+    font-weight: 700;
+    text-align: center;
+  }
+
+  @media (min-width: 1024px) {
+    .claro-recibos h2 {
+      font-size: 32px;
+    }
+  }
+
+  .recibos-section {
+    max-width: 1200px;
+    margin: 0 auto;
+    margin-top: 40px;
+    border-radius: 16px;
+    overflow: hidden;
+  }
+
+  /* Tabs */
+  .tabs-container {
+    background: #fff;
+  }
+
+  .tabs-wrapper {
+    display: flex;
+    max-width: 500px;
+    margin: 0 auto;
+  }
+
+  .tab-button {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    flex: 1;
+    padding: 16px 20px;
+    text-align: left;
+
+    font-family: Roboto;
+    font-size: 16px;
+    font-weight: 700;
+    color: #6c6c6c;
+    background: none;
+    border: none;
+    cursor: pointer;
+    position: relative;
+    transition: 0.5s ease;
+  }
+
+  .tab-button img {
+    filter: grayscale(100%);
+
+    transition: 0.5s ease;
+  }
+
+  .tab-button::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+
+    border-radius: 50%;
+    width: 100%;
+    height: 3px;
+    margin: auto;
+    background: linear-gradient(
+      90deg,
+      rgba(244, 244, 244, 0) 0%,
+      rgba(185, 185, 185, 1) 50%,
+      rgba(244, 244, 244, 0) 100%
+    );
+    transition: 0.5s ease;
+  }
+
+  .tab-button.active {
+    color: #3c3c3c;
+  }
+
+  .tab-button.active img {
+    filter: grayscale(0);
+  }
+
+  .tab-button.active::after {
+    background: linear-gradient(
+      90deg,
+      rgba(218, 41, 28, 0) 0%,
+      rgba(218, 41, 28, 1) 50%,
+      rgba(218, 41, 28, 0) 100%
+    );
+  }
+
+  @media (max-width: 767px) {
+    .tabs-wrapper {
+      max-width: 100%;
+    }
+
+    .tab-button {
+      font-size: 14px;
+      padding: 14px 16px;
+    }
+  }
+
+  /* Content */
+  .tab-content {
+    position: relative;
+
+    padding: 0px 20px;
+    min-height: 500px;
+  }
+
+  .tab-content.hidden {
+    display: none;
+  }
+
+  @media (max-width: 767px) {
+    .tab-content {
+      padding: 0px 15px;
+      min-height: 400px;
+    }
+  }
+
+  /* CONTENEDOR DEL TUTORIAL */
+  .billetera-digital-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    background: #fff;
+    border-radius: 16px;
+    padding: 30px;
+  }
+
+  .tutorial-image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .tutorial-image img {
+    max-width: 100%;
+    height: 420px;
+    border-radius: 12px;
+  }
+
+  .tutorial-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .tutorial-content {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .tutorial-content .tutorial-content_info {
+    position: relative;
+
+    padding: 24px;
+    border-radius: 8px;
+    margin: auto;
+
+    background-color: #f4f4f4;
+    max-width: 400px;
+  }
+
+  .tutorial-content .tutorial-content_info p {
+    font-family: Roboto;
+    font-size: 18px;
+    font-weight: 400;
+    color: #3c3c3c;
+  }
+
+  .tutorial-content .tutorial-content_info p strong {
+    font-weight: 700;
+  }
+
+  .tutorial-content .tutorial-qr {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+
+    margin: 30px auto 20px;
+  }
+
+  .tutorial-qr .tutorial-qr_apps {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    visibility: visible;
+  }
+
+  .tutorial-content .tutorial-qr_apps p {
+    font-size: 14px;
+    text-align: center;
+  }
+
+  .tutorial-content .tutorial-qr_apps img {
+    width: 60px;
+    height: 60px;
+    text-align: center;
+    margin: auto;
+  }
+
+  .tutorial-content .tutorial-qr .tutorial-qr_img {
+    display: none;
+    visibility: hidden;
+  }
+
+  .tutorial-content .tutorial-qr .tutorial-qr_img img {
+    width: 60px !important;
+    height: 60px !important;
+  }
+
+  .tutorial-content .tutorial-qr .tutorial-qr_description h3 {
+    font-family: Roboto;
+    font-size: 18px;
+    font-weight: 700;
+    color: #3c3c3c;
+    margin-bottom: 5px;
+  }
+
+  .tutorial-content .tutorial-qr .tutorial-qr_description p {
+    font-family: Roboto;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.3;
+    color: #6c6c6c;
+  }
+
+  .tutorial-controls {
+    position: absolute;
+    left: -15%;
+    right: -15%;
+    top: 40%;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+
+    visibility: visible;
+  }
+
+  .tutorial-prev,
+  .tutorial-next {
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    border: 3px solid #3c3c3c;
+    border-radius: 24px;
+    padding: 6px;
+    transition: all 0.3s ease;
+  }
+
+  .tutorial-prev:hover:not(.disabled),
+  .tutorial-next:hover:not(.disabled) {
+    transform: scale(1.1);
+  }
+
+  .tutorial-prev.disabled,
+  .tutorial-next.disabled {
+    opacity: 0.4;
+    cursor: not-allowed;
+  }
+
+  .tutorial-pagination {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    font-family: "Roboto", sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    color: #6c6c6c;
+    margin-bottom: 8px;
+  }
+  /* Tablet */
+  @media (max-width: 1024px) {
+    .billetera-digital-container {
+      padding: 25px;
+    }
+
+    .tutorial-info {
+      padding-right: 0;
+    }
+  }
+
+  /* Mobile */
+  @media (max-width: 850px) {
+    .tutorial-image {
+      order: 2;
+    }
+
+    .billetera-digital-container {
+      grid-template-columns: 1fr;
+      grid-template-rows: 1fr 1fr;
+    }
+
+    .tutorial-image img {
+      height: auto;
+      max-height: 350px;
+    }
+
+    .tutorial-info {
+      order: 1;
+    }
+
+    .tutorial-content .tutorial-qr {
+      max-width: 300px;
+    }
+
+    .tutorial-qr_apps {
+      display: none !important;
+      visibility: hidden !important;
+    }
+
+    .tutorial-qr .tutorial-qr_img {
+      display: block !important;
+      visibility: visible !important;
+    }
+
+    .tutorial-controls {
+      display: none;
+      visibility: hidden;
+    }
+
+    .tutorial-prev svg,
+    .tutorial-next svg {
+      width: 30px;
+      height: 30px;
+    }
+  }
+
+  /* Mobile Pequeño */
+  @media (max-width: 480px) {
+    .billetera-digital-container {
+      padding: 15px;
+      gap: 20px;
+    }
+
+    .tutorial-image img {
+      max-height: 280px;
+    }
+
+    .tutorial-pagination {
+      font-size: 14px;
+    }
+
+    .tutorial-prev svg,
+    .tutorial-next svg {
+      width: 28px;
+      height: 28px;
+    }
+  }
+
+  /*#endregion */
+</style>
+
+<script>
+  import billetera_01 from "@/assets/billetera-1.png";
+  import billetera_02 from "@/assets/billetera-2.png";
+  import billetera_03 from "@/assets/billetera-3.png";
+  import billetera_04 from "@/assets/billetera-4.png";
+  import billetera_05 from "@/assets/billetera-5.png";
+  import billetera_06 from "@/assets/billetera-6.png";
+  import billetera_07 from "@/assets/billetera-7.png";
+
+  document.addEventListener("DOMContentLoaded", function () {
+    /* ======================================================
+      TABS
+      ====================================================== */
+    // Tab functionality
+    const tabButtons = document.querySelectorAll(".tab-button");
+    const tabContents = document.querySelectorAll(".tab-content");
+    const tabsContainer = document.querySelector(".tabs-container .tabs-wrapper") as HTMLElement;
+
+    // ============================================
+    // Pasos de Recibos
+    // ============================================
+
+    // Datos de cada recibo con sus respectivos pasos
+    const datosRecibos = {
+      billetera_digital: {
+        nombre: "Billetera Digital",
+        pasos: [
+          {
+            titulo: `Ingrese a <strong>Mi Claro App</strong> en tu <strong>servicio postpago</strong> o <strong>Claro Hogar</strong> y selecciona el ícono <strong>Pagos.</strong>`,
+            imagen: billetera_01.src,
+          },
+          {
+            titulo: `Elige el recibo en la pestaña <strong>Pendientes de pago,</strong> acepta los <strong>Términos y Condiciones</strong> y selecciona <strong>Pagar.</strong>`,
+            imagen: billetera_02.src,
+          },
+          {
+            titulo: `Elige una <strong>Billetera digital</strong> como medio de pago y selecciona <strong>Continuar.</strong>`,
+            imagen: billetera_03.src,
+          },
+          {
+            titulo: `Ingresa a la <strong>Billetera digital</strong> y selecciona <strong>Aprobar compras.</strong>`,
+            imagen: billetera_04.src,
+          },
+          {
+            titulo: `Copia el <strong>Código de aprobación</strong> y regresa a <strong>Mi Claro App</strong>`,
+            imagen: billetera_05.src,
+          },
+          {
+            titulo: `En Mi Claro App, ingresa tu número afiliado a la <strong>Billetera digital</strong>, pega el <strong>código</strong> y confirma el pago.`,
+            imagen: billetera_06.src,
+          },
+          {
+            titulo: `¡Listo! Verás el <strong>mensaje de pago exitoso</strong> y recibirás tu confirmación.`,
+            imagen: billetera_07.src,
+          },
+        ],
+        pie: "*También puedes recargar desde agencias y agentes",
+      },
+      interbank: {
+        nombre: "Interbank",
+        pasos: [
+          {
+            titulo:
+              'Paso 1 - Ingresa al App de Interbank y dirígete a la sección "Operaciones"',
+            imagen:
+              "https://www.claro.com.pe/assets/havas/olo/assets/interbank-paso-1.png",
+          },
+          {
+            titulo: 'Paso 2 - Elige la opción "Servicios"',
+            imagen:
+              "https://www.claro.com.pe/assets/havas/olo/assets/interbank-paso-2.png",
+          },
+          {
+            titulo: 'Paso 3 - Busca "OLO"',
+            imagen:
+              "https://www.claro.com.pe/assets/havas/olo/assets/interbank-paso-3.png",
+          },
+          {
+            titulo: "Paso 4 - Ingresa tu código de cliente",
+            imagen:
+              "https://www.claro.com.pe/assets/havas/olo/assets/interbank-paso-4.png",
+          },
+          {
+            titulo: "Paso 5 - Selecciona tu paquete ¡Y listo!",
+            imagen:
+              "https://www.claro.com.pe/assets/havas/olo/assets/interbank-paso-5.png",
+          },
+        ],
+        pie: "*También puedes recargar desde agencias",
+      },
+    };
+
+    // Variables globales para el sistema de tabs recibos
+    let reciboActual = "billetera_digital";
+    let pasoActual = 1;
+    let pasosTotales = 0;
+
+    // Elementos del DOM
+    const tutorialImg = document.getElementById("tutorial-img") as HTMLImageElement;
+    const tutorialTitle = document.getElementById("tutorial-description");
+    const btnPrev = document.getElementById("tutorial-prev");
+    const btnNext = document.getElementById("tutorial-next");
+    const currentStep = document.querySelector(".current-step");
+    const totalSteps = document.querySelector(".total-steps");
+
+    // ============================================
+    // FUNCIONES PRINCIPALES
+    // ============================================
+
+    /**
+     * Carga el tutorial de un recibo específico
+     */
+    function cargaTutorial(nombreRecibo) {
+      if (!datosRecibos[nombreRecibo]) {
+        console.error(`Recibo "${nombreRecibo}" no encontrado`);
+        return;
+      }
+
+      reciboActual = nombreRecibo;
+      pasoActual = 1;
+      pasosTotales = datosRecibos[nombreRecibo].pasos.length;
+
+      // Actualizar contador total
+      if (totalSteps) {
+        totalSteps.textContent = pasosTotales.toString();
+      }
+
+      // Mostrar primer paso
+      mostrarPaso();
+    }
+
+    /**
+     * Muestra el paso actual del tutorial
+     */
+    function mostrarPaso() {
+      const datoRecibo = datosRecibos[reciboActual];
+      const paso = datoRecibo.pasos[pasoActual - 1];
+
+      // Actualizar imagen y título
+      if (tutorialImg) {
+        tutorialImg.src = paso.imagen;
+        tutorialImg.alt = paso.titulo;
+      }
+
+      if (tutorialTitle) {
+        tutorialTitle.innerHTML = paso.titulo.toString();
+      }
+
+      // Actualizar contador
+      if (currentStep) {
+        currentStep.textContent = pasoActual.toString();
+      }
+
+      // Actualizar estado de botones
+      actualizarBotones();
+    }
+
+    /**
+     * Actualiza el estado de los botones de navegación
+     */
+    function actualizarBotones() {
+      if (btnPrev) {
+        btnPrev.classList.toggle("disabled", pasoActual === 1);
+      }
+      if (btnNext) {
+        btnNext.classList.toggle("disabled", pasoActual === pasosTotales);
+      }
+    }
+
+    /**
+     * Cambia al siguiente paso
+     */
+    function siguientePaso() {
+      if (pasoActual < pasosTotales) {
+        pasoActual++;
+        mostrarPaso();
+      }
+    }
+
+    /**
+     * Cambia al paso anterior
+     */
+    function pasoAnterior() {
+      if (pasoActual > 1) {
+        pasoActual--;
+        mostrarPaso();
+      }
+    }
+
+    /**
+     * Centra el tab activo en el contenedor con scroll suave
+     */
+    function scrollActiveTabIntoView(tabElement) {
+      if (!tabsContainer || !tabElement) return;
+
+      // Solo aplicar en móvil y tablet (cuando hay scroll horizontal)
+      if (window.innerWidth <= 1024) {
+        const containerWidth = tabsContainer.offsetWidth;
+        const tabLeft = tabElement.offsetLeft;
+        const tabWidth = tabElement.offsetWidth;
+
+        // Calcula la posición para centrar el tab
+        const scrollPosition = tabLeft - containerWidth / 2 + tabWidth / 2;
+
+        tabsContainer.scrollTo({
+          left: Math.max(0, scrollPosition),
+          behavior: "smooth",
+        });
+      }
+    }
+
+    /**
+     * Cambia el tab activo
+     */
+    function cambiarTabRegistro(nombreRegistro) {
+      // Remover clase active de todos los tabs
+      tabButtons.forEach((tab) => {
+        tab.classList.remove("active");
+      });
+
+      // Agregar clase active al tab seleccionado
+      const tabSeleccionado = document.querySelector(
+        `[data-tab="${nombreRegistro}"]`,
+      );
+      if (tabSeleccionado) {
+        tabSeleccionado.classList.add("active");
+
+        // Centrar el tab activo en mobile/tablet
+        scrollActiveTabIntoView(tabSeleccionado);
+      }
+
+      // Cargar tutorial del banco
+      cargaTutorial(nombreRegistro);
+    }
+
+    // ============================================
+    // EVENT LISTENERS
+    // ============================================
+    /**
+     * Inicializa todos los event listeners
+     */
+    function inicializarEventListeners() {
+      // Event listeners para tabs (desktop/tablet/mobile)
+      tabButtons.forEach((tab) => {
+        tab.addEventListener("click", function () {
+          const registro = this.getAttribute("data-tab");
+          cambiarTabRegistro(registro);
+        });
+      });
+
+      // Event listeners para botones de navegación
+      if (btnNext) {
+        btnNext.addEventListener("click", function () {
+          if (!this.classList.contains("disabled")) {
+            siguientePaso();
+          }
+        });
+      }
+
+      if (btnPrev) {
+        btnPrev.addEventListener("click", function () {
+          if (!this.classList.contains("disabled")) {
+            pasoAnterior();
+          }
+        });
+      }
+
+      // Soporte para navegación con teclado
+      document.addEventListener("keydown", function (e) {
+        // Solo si estamos en la sección de tutorial
+        const tutorialContainer = document.querySelector(
+          ".billetera-digital-container",
+        );
+        if (!tutorialContainer || !isElementInViewport(tutorialContainer)) {
+          return;
+        }
+
+        switch (e.key) {
+          case "ArrowLeft":
+            e.preventDefault();
+            if (pasoActual > 1) {
+              pasoAnterior();
+            }
+            break;
+
+          case "ArrowRight":
+            e.preventDefault();
+            if (pasoActual < pasosTotales) {
+              siguientePaso();
+            }
+            break;
+        }
+      });
+    }
+
+    /**
+     * Verifica si un elemento está visible en el viewport
+     */
+    function isElementInViewport(el) {
+      const rect = el.getBoundingClientRect();
+      return (
+        rect.top >= 0 &&
+        rect.left >= 0 &&
+        rect.bottom <=
+          (window.innerHeight || document.documentElement.clientHeight) &&
+        rect.right <=
+          (window.innerWidth || document.documentElement.clientWidth)
+      );
+    }
+
+    // ============================================
+    // INICIALIZACIÓN
+    // ============================================
+
+    /**
+     * Inicializa el sistema completo de tabs de recibos
+     */
+    function datoRecinicializarTutorialRecibos() {
+      // Inicializar event listeners
+      inicializarEventListeners();
+
+      // Cargar tutorial inicial (Billetera Digital por defecto)
+      cargaTutorial("billetera_digital");
+    }
+
+    datoRecinicializarTutorialRecibos();
+  });
+</script>
