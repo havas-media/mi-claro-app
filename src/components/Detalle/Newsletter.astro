@@ -1,0 +1,19 @@
+---
+import newsletter_mobile from "@/assets/newsletter_mobile.webp";
+import newsletter_desktop from "@/assets/newsletter_desktop.webp";
+---
+
+<section class="newsletter_app detail_intern hidden">
+  <div class="container">
+    <div class="bg-linear-to-l from-[#2FBCC4] to-[#006E7A] flex lg:justify-center gap-4 xl:gap-10 rounded-2xl overflow-hidden pt-4 md:pt-0 px-2 md:px-8 ">
+      <picture class="w-5/12 lg:max-w-[340px]">
+        <source media="(min-width: 768px)" srcset={newsletter_desktop.src} />
+        <img class="w-full h-full object-contain" src={newsletter_mobile.src} alt="Newsletter" />
+      </picture>
+      <div class="flex flex-col gap-2 xl:gap-3 w-7/12 py-4 md:justify-center">
+        <h3 class="font-roboto text-lg md:text-2xl xl:text-3xl font-bold leading-[1.2] text-white">¿Cómo saber si mi recibo está vencido?</h3>
+        <p class="font-roboto text-sm md:text-base leading-normal text-white">En Pagos, Pendientes de pago, un recibo vencido se muestra con un mensaje en rojo que indica la fecha. Puedes pagarlo desde esa pantalla con tarjeta, Yape o activar el débito automático</p>
+      </div>
+    </div>
+  </div>
+</section>
