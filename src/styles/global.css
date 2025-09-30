@@ -114,3 +114,8 @@
     }
   }
 }
+
+.tutorial-content{
+  --swiper-navigation-size: 16px;
+  --swiper-navigation-color: #3C3C3C;
+}

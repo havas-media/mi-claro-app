@@ -2,33 +2,61 @@
 import img_consejo_01 from "@/assets/consejo_01.png";
 import img_consejo_02 from "@/assets/consejo_02.png";
 import img_consejo_03 from "@/assets/consejo_03.png";
+import "swiper/css/bundle";
+
 ---
 
 <section class="w-full detail_intern hidden">
   <div class="container">
     <h3 class="font-amx-bold text-3xl xl:text-4xl xl:pb-4 text-center">Consejos y tips</h3>
-    <div class="sliderConsejos w-full xl:max-w-[1040px] xl:mx-auto">
-      <div class="slick-slide">
-        <div class="flex flex-col gap-2 max-w-[320px] min-h-[294px] justify-center items-center shadow-xl/8 mb-4 p-6 rounded-3xl overflow-hidden mx-auto">
-          <h3 class="font-roboto font-bold text-xl w-full">Controla tu saldo</h3>
-          <p class="font-roboto text-sm">Revisa si tienes el saldo suficiente para completar la operación.</p>
-          <img class="max-w-[140px]" src={img_consejo_01.src} alt="Consejo 01" />
+    <div class="sliderConsejos swiper xl:max-w-[1040px] xl:mx-auto">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide">
+          <div class="flex flex-col gap-2 max-w-[320px] min-h-[294px] justify-center items-center shadow-xl/8 mb-4 p-6 rounded-3xl overflow-hidden mx-auto">
+            <h3 class="font-roboto font-bold text-xl w-full">Controla tu saldo</h3>
+            <p class="font-roboto text-sm">Revisa si tienes el saldo suficiente para completar la operación.</p>
+            <img class="max-w-[140px]" src={img_consejo_01.src} alt="Consejo 01" />
+          </div>
+        </div>
+        <div class="swiper-slide">
+          <div class="flex flex-col gap-2 max-w-[320px] min-h-[294px] justify-center items-center shadow-xl/8 mb-4 p-6 rounded-3xl overflow-hidden mx-auto">
+            <h3 class="font-roboto font-bold text-xl w-full">Compras por internet</h3>
+            <p class="font-roboto text-sm">Asegúrate que esté habilitado. Puedes activar esta opción en el aplicativo de tu banco.</p>
+            <img class="max-w-[140px]" src={img_consejo_02.src} alt="Consejo 02" />
+          </div>
+        </div>
+        <div class="swiper-slide">
+          <div class="flex flex-col gap-2 max-w-[320px] min-h-[294px] justify-center items-center shadow-xl/8 mb-4 p-6 rounded-3xl overflow-hidden mx-auto">
+            <h3 class="font-roboto font-bold text-xl w-full">Revisa el pago de tu recibo</h3>
+            <p class="font-roboto text-sm">Valida que tu recibo aparezca en la sección de recibos pagados.</p>
+            <img class="max-w-[140px]" src={img_consejo_03.src} alt="Consejo 03" />
+          </div>
         </div>
       </div>
-      <div class="slick-slide">
-        <div class="flex flex-col gap-2 max-w-[320px] min-h-[294px] justify-center items-center shadow-xl/8 mb-4 p-6 rounded-3xl overflow-hidden mx-auto">
-          <h3 class="font-roboto font-bold text-xl w-full">Compras por internet</h3>
-          <p class="font-roboto text-sm">Asegúrate que esté habilitado. Puedes activar esta opción en el aplicativo de tu banco.</p>
-          <img class="max-w-[140px]" src={img_consejo_02.src} alt="Consejo 02" />
-        </div>
-      </div>
-      <div class="slick-slide">
-        <div class="flex flex-col gap-2 max-w-[320px] min-h-[294px] justify-center items-center shadow-xl/8 mb-4 p-6 rounded-3xl overflow-hidden mx-auto">
-          <h3 class="font-roboto font-bold text-xl w-full">Revisa el pago de tu recibo</h3>
-          <p class="font-roboto text-sm">Valida que tu recibo aparezca en la sección de recibos pagados.</p>
-          <img class="max-w-[140px]" src={img_consejo_03.src} alt="Consejo 03" />
-        </div>
-      </div>
+      <div class="swiper-pagination relative top-0 bottom-0 pt-3"></div>
     </div>
   </div>
 </section>
+
+
+<script>
+  import Swiper from "swiper/bundle";
+
+  const swiper = new Swiper(".sliderConsejos", {
+    slidesPerView: 1,
+    spaceBetween: 20,
+    pagination: {
+      el: ".sliderConsejos .swiper-pagination",
+      clickable: true,
+    },
+    navigation: false,
+    breakpoints: {
+      768: {
+        slidesPerView: 2,
+      },
+      1024: {
+        slidesPerView: 3,
+      },
+    },
+  });
+</script>

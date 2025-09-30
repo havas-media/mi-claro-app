@@ -330,37 +330,6 @@
   const btnsActions = sectionQueEs.querySelectorAll(".btn-link");
   const mainSections = document.querySelectorAll(".main_section");
   const internSections = document.querySelectorAll(".detail_intern");
-  const sliderConsejos = document.querySelector('.sliderConsejos');
-  const initSliderConsejos = () => {
-    if (sliderConsejos) {
-        $(sliderConsejos).slick({
-          dots: false,
-          arrows: false,
-          infinite: false,
-          speed: 500,
-          slidesToShow: 3,
-          slidesToScroll: 1,
-          responsive: [
-            {
-              breakpoint: 1024,
-              settings: {
-                slidesToShow: 2,
-                slidesToScroll: 1,
-                dots: true,
-              }
-            },
-            {
-              breakpoint: 768,
-              settings: {
-                slidesToShow: 1,
-                slidesToScroll: 1,
-                dots: true,
-              }
-            }
-          ]
-        });    
-    }
-  };
   btnsActions.forEach(btn => {
     btn.addEventListener("click", (e) => {
       const href = btn.getAttribute("href");
@@ -368,8 +337,7 @@
       mainSections.forEach(section => section.classList.add("hidden"));
       internSections.forEach(section => section.classList.remove("hidden"));
       //document.querySelector(href).classList.remove("hidden");
-      datoRecinicializarTutorialRecibos();
-      initSliderConsejos();
+      //datoRecinicializarTutorialRecibos();
     });
   });
   /* ======================================================
