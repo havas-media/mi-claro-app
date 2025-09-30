@@ -10,7 +10,7 @@ import "swiper/css/bundle";
 ---
 
 
-<section class="claro-recibos detail_intern  py-10">
+<section class="claro-recibos detail_intern hidden py-10">
   <div class="container mx-auto px-4">
     <h2 class="text-2xl lg:text-4xl font-bold text-center text-[#3c3c3c] mb-10">
       Claro Hogar y recibos móviles
@@ -21,7 +21,7 @@ import "swiper/css/bundle";
       <div class="tabs-container overflow-x-auto flex items-end">
         <div class="tabs-wrapper flex flex-row justify-start md:justify-center md:mx-auto">
           <button 
-            class="tab-button group flex items-center gap-2.5 p-4 md:p-5 text-left font-bold text-base md:text-lg text-[#6c6c6c] bg-transparent border-none cursor-pointer relative w-fit transition-all duration-500 hover:text-[#3c3c3c] active"
+            class="tab-button group flex items-center gap-2.5 p-4 md:p-5 text-left font-bold text-base md:text-lg text-[#6c6c6c] bg-transparent border-none cursor-pointer relative w-fit transition-all duration-500 hover:text-[#3c3c3c]"
             data-category="claro_hogar_y_recibos_moviles"
             data-sub-category="paga_con_billetera_digital"
           >
@@ -36,6 +36,7 @@ import "swiper/css/bundle";
           
           <button 
             class="tab-button group flex flex-row items-center gap-2.5 p-4 md:p-5 text-left font-bold text-base md:text-lg text-[#6c6c6c] bg-transparent border-none cursor-pointer relative w-[240px] transition-all duration-500 hover:text-[#3c3c3c]"
+            data-category="claro_hogar_y_recibos_moviles"
             data-sub-category="paga_con_tarjeta"
           >
             <img 
@@ -163,147 +164,165 @@ import "swiper/css/bundle";
 
 <script>
   import Swiper from "swiper/bundle";
-  import paga_con_billetera_digital_paso_01 from "@/assets/paga_con_billetera_digital/paso_01.png";
-  import paga_con_billetera_digital_paso_02 from "@/assets/paga_con_billetera_digital/paso_02.png";
-  import paga_con_billetera_digital_paso_03 from "@/assets/paga_con_billetera_digital/paso_03.png";
-  import paga_con_billetera_digital_paso_04 from "@/assets/paga_con_billetera_digital/paso_04.png";
-  import paga_con_billetera_digital_paso_05 from "@/assets/paga_con_billetera_digital/paso_05.png";
-  import paga_con_billetera_digital_paso_06 from "@/assets/paga_con_billetera_digital/paso_06.png";
-  import paga_con_billetera_digital_paso_07 from "@/assets/paga_con_billetera_digital/paso_07.png";
-  
-  const dataTabs = [
-    {
-      "claro_hogar_y_recibos_moviles": [
+  import paga_con_billetera_digital_paso_01 from "@/assets/claro_hogar_y_recibos_moviles/paga_con_billetera_digital/paso_01.png";
+  import paga_con_billetera_digital_paso_02 from "@/assets/claro_hogar_y_recibos_moviles/paga_con_billetera_digital/paso_02.png";
+  import paga_con_billetera_digital_paso_03 from "@/assets/claro_hogar_y_recibos_moviles/paga_con_billetera_digital/paso_03.png";
+  import paga_con_billetera_digital_paso_04 from "@/assets/claro_hogar_y_recibos_moviles/paga_con_billetera_digital/paso_04.png";
+  import paga_con_billetera_digital_paso_05 from "@/assets/claro_hogar_y_recibos_moviles/paga_con_billetera_digital/paso_05.png";
+  import paga_con_billetera_digital_paso_06 from "@/assets/claro_hogar_y_recibos_moviles/paga_con_billetera_digital/paso_06.png";
+  import paga_con_billetera_digital_paso_07 from "@/assets/claro_hogar_y_recibos_moviles/paga_con_billetera_digital/paso_07.png";
+  import paga_con_tarjeta_paso_01 from "@/assets/claro_hogar_y_recibos_moviles/paga_con_tarjeta/paso_01.png";
+  import paga_con_tarjeta_paso_02 from "@/assets/claro_hogar_y_recibos_moviles/paga_con_tarjeta/paso_02.png";
+  import paga_con_tarjeta_paso_03 from "@/assets/claro_hogar_y_recibos_moviles/paga_con_tarjeta/paso_03.png";
+  import paga_con_tarjeta_paso_04 from "@/assets/claro_hogar_y_recibos_moviles/paga_con_tarjeta/paso_04.png";
+  import paga_con_tarjeta_paso_05 from "@/assets/claro_hogar_y_recibos_moviles/paga_con_tarjeta/paso_05.png";
+
+  // Estructura de datos más plana y organizada
+  const dataTabs = {
+    "claro_hogar_y_recibos_moviles": {
+      "paga_con_billetera_digital": [
         {
-          "paga_con_billetera_digital": [
-            {
-              text: `Ingresa a <strong>Mi Claro App</strong> en tu <strong>servicio postpago</strong> o <strong>Claro Hogar</strong> y selecciona el ícono <strong>Pagos</strong>.`,
-              image: paga_con_billetera_digital_paso_01.src
-            },
-            {
-              text: `Elige el recibo en la pestaña Pendientes de pago, acepta los Términos y Condiciones y selecciona Pagar.`,
-              image: paga_con_billetera_digital_paso_02.src
-            },
-            {
-              text: `Elige una Billetera digital como medio de pago y selecciona Continuar.`,
-              image: paga_con_billetera_digital_paso_03.src
-            },
-            {
-              text: `Ingresa a la Billetera digital y selecciona Aprobar compras.`,
-              image: paga_con_billetera_digital_paso_04.src
-            },
-            {
-              text: `Copia el Código de aprobación y regresa a Mi Claro App.`,
-              image: paga_con_billetera_digital_paso_05.src
-            },
-            {
-              text: `En Mi Claro App, ingresa tu número afiliado a la Billetera digital, pega el código y confirma el pago.`,
-              image: paga_con_billetera_digital_paso_06.src
-            },
-            {
-              text: `¡Listo! Verás el mensaje de pago exitoso y recibirás tu confirmación.`,
-              image: paga_con_billetera_digital_paso_07.src
-            }
-          ]
+          text: `Ingresa a <strong>Mi Claro App</strong> en tu <strong>servicio postpago</strong> o <strong>Claro Hogar</strong> y selecciona el ícono <strong>Pagos</strong>.`,
+          image: paga_con_billetera_digital_paso_01.src
+        },
+        {
+          text: `Elige el recibo en la pestaña Pendientes de pago, acepta los Términos y Condiciones y selecciona Pagar.`,
+          image: paga_con_billetera_digital_paso_02.src
+        },
+        {
+          text: `Elige una Billetera digital como medio de pago y selecciona Continuar.`,
+          image: paga_con_billetera_digital_paso_03.src
+        },
+        {
+          text: `Ingresa a la Billetera digital y selecciona Aprobar compras.`,
+          image: paga_con_billetera_digital_paso_04.src
+        },
+        {
+          text: `Copia el Código de aprobación y regresa a Mi Claro App.`,
+          image: paga_con_billetera_digital_paso_05.src
+        },
+        {
+          text: `En Mi Claro App, ingresa tu número afiliado a la Billetera digital, pega el código y confirma el pago.`,
+          image: paga_con_billetera_digital_paso_06.src
+        },
+        {
+          text: `¡Listo! Verás el mensaje de pago exitoso y recibirás tu confirmación.`,
+          image: paga_con_billetera_digital_paso_07.src
+        }
+      ],
+      "paga_con_tarjeta": [
+        {
+          text: `Ingresa a <strong>Mi Claro App</strong> en tu <strong>servicio postpago</strong> o <strong>Claro Hogar</strong> y selecciona el ícono <strong>Pagos</strong>.`,
+          image: paga_con_tarjeta_paso_01.src
+        },
+        {
+          text: `Elige el recibo en la pestaña Pendientes de pago, acepta los Términos y Condiciones y selecciona Pagar.`,
+          image: paga_con_tarjeta_paso_02.src
+        },
+        {
+          text: `Elige una Billetera digital como medio de pago y selecciona Continuar.`,
+          image: paga_con_tarjeta_paso_03.src
+        },
+        {
+          text: `Ingresa a la Billetera digital y selecciona Aprobar compras.`,
+          image: paga_con_tarjeta_paso_04.src
+        },
+        {
+          text: `Copia el Código de aprobación y regresa a Mi Claro App.`,
+          image: paga_con_tarjeta_paso_05.src
         }
       ]
     }
-  ];
-  // JavaScript para la funcionalidad de los tabs y tutorial
-  document.addEventListener('DOMContentLoaded', function() {
-    // Declarar la variable tutorialSwiper en un ámbito accesible para todas las funciones
-    let tutorialSwiper;
+    // Otras categorías principales si las hubiera
+  };
+
+  // Función para obtener parámetros de la URL actual
+  const getUrlParameter = (name) => {
+    const urlParams = new URLSearchParams(window.location.search);
+    return urlParams.get(name);
+  }
+  // Función para actualizar la URL sin recargar la página
+  const updateUrlWithoutReload = (category, subCategory) => {
+    const url = new URL(window.location.href);
     
-    // Inicializar Swiper
-    tutorialSwiper = new Swiper('.tutorial-swiper', {
-      // Opciones de configuración
-      slidesPerView: 1,
-      spaceBetween: 30,
-      loop: false,
-      autoHeight: true,
-      // Navegación con flechas
-      navigation: {
-        nextEl: '.swiper-button-next',
-        prevEl: '.swiper-button-prev',
-      },
-      
-      // Paginación con bullets
-      pagination: {
-        el: '.tutorial-content .swiper-pagination',
-        clickable: true,
-      },
-      
-      // Efecto de transición
-      effect: 'fade',
-      fadeEffect: {
-        crossFade: true
-      },
-    });
-    
-    // Función para actualizar la imagen del tutorial
-    function updateTutorialImage(imageSrc = null) {
-      // Mostrar la imagen correspondiente al paso actual
-      const currentImage = document.querySelector(`.tutorial-img`) as HTMLImageElement;
-      if (currentImage) {
-        // Si se proporciona una nueva URL de imagen, actualizarla
-        if (imageSrc) {
-          currentImage.src = imageSrc;
-        }
-      }
+    if (category) {
+      url.searchParams.set('category_tab', category);
+    } else {
+      url.searchParams.delete('category_tab');
     }
     
-    // Definición de la función para generar el slider dinámicamente
-    const generateSliderSwiper = (tabId, subTabId) => {
-      // Buscar los datos del tab seleccionado
-      const tabData = dataTabs.find(tab => tab[tabId]);
-      if (!tabData || !tabData[tabId]) return;
-      
-      // Obtener los slides para este tab
-      const subTabData = tabData[tabId].find(tab => tab[subTabId]);
-      const slides = subTabData ? subTabData[subTabId] : [];
-      // Actualizar el contador de pasos
-      const totalStepsEl = document.querySelector('.total-steps');
-      if (totalStepsEl) {
-        totalStepsEl.textContent = slides.length;
-      }
-      
-      // Actualizar la imagen del primer paso
-      if (slides.length > 0) {
-        updateTutorialImage(slides[0].image);
-      }
-      
-      // Destruir el swiper existente si existe
-      if (tutorialSwiper) {
-        tutorialSwiper.destroy(true, true);
-      }
-      
-      // Reconstruir completamente el contenedor del swiper
-      const swiperContainer = document.querySelector('.tutorial-swiper');
-      if (!swiperContainer) return;
-      
-      // Crear el wrapper y los slides
-      let swiperHTML = '<div class="swiper-wrapper">';
-      
-      // Generar HTML para cada slide
-      slides.forEach((slideData) => {
-        swiperHTML += `
-          <div class="swiper-slide">
-            <div class="tutorial-content_info relative rounded-lg mx-auto">
-              <p id="tutorial-description" class="font-normal text-lg text-[#3c3c3c] mb-0">
-                ${slideData.text}
-              </p>
-            </div>
+    if (subCategory) {
+      url.searchParams.set('subcategory_tab', subCategory);
+    } else {
+      url.searchParams.delete('subcategory_tab');
+    }
+    
+    // Actualiza la URL sin recargar la página
+    window.history.pushState({ category, subCategory }, '', url.toString());
+  }
+
+  let tutorialSwiper;
+  // Función para actualizar la imagen del tutorial
+  function updateTutorialImage(imageSrc = null) {
+    const currentImage = document.querySelector('.tutorial-img') as HTMLImageElement;
+    if (currentImage && imageSrc) {
+      currentImage.src = imageSrc;
+    }
+  }
+
+  
+  // Función mejorada para generar el slider
+  const generateSliderSwiper = (category, subCategory) => {
+    // Acceso directo a los slides
+    const slides = dataTabs[category]?.[subCategory];
+    
+    // Si no hay slides, salir de la función
+    if (!slides || !slides.length) return;
+    
+    // Actualizar contador de pasos
+    const totalStepsEl = document.querySelector('.total-steps');
+    const currentStepEl = document.querySelector('.current-step');
+    if (totalStepsEl) {
+      totalStepsEl.textContent = slides.length.toString();
+    }
+    if (currentStepEl) {
+      currentStepEl.textContent = '1';
+    }
+    
+    // Actualizar la imagen del primer paso
+    if (slides.length > 0) {
+      updateTutorialImage(slides[0].image);
+    }
+    
+    // Destruir el swiper existente si existe
+    if (tutorialSwiper) {
+      tutorialSwiper.destroy(true, true);
+    }
+    
+    // Reconstruir el contenedor del swiper
+    const swiperContainer = document.querySelector('.tutorial-swiper');
+    if (!swiperContainer) return;
+    
+    // Crear el HTML para los slides
+    let swiperHTML = '<div class="swiper-wrapper">';
+    slides.forEach((slideData) => {
+      swiperHTML += `
+        <div class="swiper-slide">
+          <div class="tutorial-content_info relative rounded-lg mx-auto">
+            <p id="tutorial-description" class="font-normal text-lg text-[#3c3c3c] mb-0">
+              ${slideData.text}
+            </p>
           </div>
-        `;
-      });
-      
-      // Cerrar el wrapper y añadir los controles de navegación
-      swiperHTML += '</div>';      
-      // Actualizar el HTML del contenedor
-      swiperContainer.innerHTML = swiperHTML;
-      
-      // Inicializar un nuevo swiper
-      tutorialSwiper = new Swiper('.tutorial-swiper', {
+        </div>
+      `;
+    });
+    swiperHTML += '</div>';
+    
+    // Actualizar el HTML
+    swiperContainer.innerHTML = swiperHTML;
+    
+    // Inicializar un nuevo swiper
+    tutorialSwiper = new Swiper('.tutorial-swiper', {
         slidesPerView: 1,
         spaceBetween: 30,
         loop: false,
@@ -322,40 +341,92 @@ import "swiper/css/bundle";
         },
         on: {
           slideChange: function() {
-            // Actualizar la imagen según el slide activo
             const activeIndex = this.activeIndex;
             if (slides[activeIndex]) {
               updateTutorialImage(slides[activeIndex].image);
             }
             
-            // Actualizar el contador de pasos
             const currentStepEl = document.querySelector('.current-step');
             if (currentStepEl) {
-              currentStepEl.textContent = activeIndex + 1;
+              currentStepEl.textContent = (activeIndex + 1).toString();
             }
           }
         }
       });
     };
-    
-    // Funcionalidad de tabs
+
+  document.addEventListener('DOMContentLoaded', function() {   
+    // Inicializar Swiper
+    tutorialSwiper = new Swiper('.tutorial-swiper', { });
+    // Event listeners para los botones de tabs
     const tabButtons = document.querySelectorAll('.tab-button');
     tabButtons.forEach(button => {
       button.addEventListener('click', function() {
         tabButtons.forEach(btn => btn.classList.remove('active'));
         this.classList.add('active');
-        const getSubCategory = button.getAttribute('data-sub-category');
-        const getCategory = button.getAttribute('data-category');
-        generateSliderSwiper(getCategory, getSubCategory);
+        const category = this.getAttribute('data-category');
+        const subCategory = this.getAttribute('data-sub-category');
+        // Actualizar URL sin recargar
+        updateUrlWithoutReload(category, subCategory);
+        generateSliderSwiper(category, subCategory);
       });
     });
-    
-    // Inicializar el primer tab activo al cargar la página
-    const activeTab = document.querySelector('.tab-button.active');
-    if (activeTab) {
-      const activeTabCategory = activeTab.getAttribute('data-category');
-      const activeTabId = activeTab.getAttribute('data-sub-category');
-      generateSliderSwiper(activeTabCategory, activeTabId);
+    // Inicializar desde la URL actual al cargar la página
+    const initialCategory = getUrlParameter('category_tab');
+    const initialSubCategory = getUrlParameter('subcategory_tab');
+    if (initialCategory && initialSubCategory) {
+      // Activar el botón correspondiente
+      tabButtons.forEach(btn => {
+        if (btn.getAttribute('data-category') === initialCategory && 
+            btn.getAttribute('data-sub-category') === initialSubCategory) {
+          btn.classList.add('active');
+        }
+      });
+      const mainSections = document.querySelectorAll(".main_section");
+      const internSections = document.querySelectorAll(".detail_intern");
+      mainSections.forEach(section => section.classList.add("hidden"));
+      internSections.forEach(section => section.classList.remove("hidden"));
+      console.log(initialCategory, initialSubCategory);
+      // Inicializar el slider
+      generateSliderSwiper(initialCategory, initialSubCategory);
+    }
+      
+  });
+
+  window.addEventListener('popstate', function(event) {
+    if (event.state) {
+      const { category, subCategory } = event.state;
+      const tabButtons = document.querySelectorAll('.tab-button');
+      // Activar el botón correspondiente
+      tabButtons.forEach(btn => {
+        btn.classList.remove('active');
+        if (btn.getAttribute('data-category') === category && 
+            btn.getAttribute('data-sub-category') === subCategory) {
+          btn.classList.add('active');
+        }
+      });
+      // Generar slider con los parámetros del estado
+      generateSliderSwiper(category, subCategory);
+    } else {
+      // Si no hay estado (ej: primera carga), usar valores por defecto o de URL
+      const category = getUrlParameter('category_tab') || 'claro_hogar_y_recibos_moviles';
+      const subCategory = getUrlParameter('subcategory_tab') || 'paga_con_billetera_digital';
+      generateSliderSwiper(category, subCategory);
     }
   });
+
+  document.addEventListener('categoryChanged', function(e: CustomEvent) {
+    const { category, subCategory } = e.detail;
+    // Activar el botón correspondiente
+    const tabButtons = document.querySelectorAll('.tab-button');
+    tabButtons.forEach(btn => {
+      btn.classList.remove('active');
+      if (btn.getAttribute('data-category') === category && btn.getAttribute('data-sub-category') === subCategory) {
+        btn.classList.add('active');
+      }
+    });
+    // Generar slider
+    generateSliderSwiper(category, subCategory);
+  });
+
 </script>
