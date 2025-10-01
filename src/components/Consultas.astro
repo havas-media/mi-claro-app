@@ -18,7 +18,7 @@
         preguntas frecuentes. Si no encuentras la respuesta que buscas, visita
         nuestra sección de ayuda, donde estaremos encantados de asistirte.
       </p>
-      <a class="btn-help" href="#">Ir a Sección de Ayuda</a>
+      <a class="btn-help hover:bg-claro hover:text-white" href="#">Ir a Sección de Ayuda</a>
     </div>
     <div class="part2">
       <div class="items">
@@ -222,12 +222,17 @@
     width: 240px;
     height: 40px;
     border: 1.5px solid;
-
     font-family: Roboto;
     font-size: 16px;
     font-weight: 700;
     color: #da291c;
     text-decoration: none;
+    transition: all 0.3s ease-in-out;
+  }
+
+  section.consultas a:hover {
+    background-color: #da291c;
+    color: #fff;
   }
 
   @media (min-width: 901px) {

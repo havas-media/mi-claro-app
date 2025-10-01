@@ -28,7 +28,10 @@
     </div>
 
     <div class="about-description_links">
-      <a class="btn-link" href="#">
+      <a
+        class="btn-link" href="#"
+        data-category="consulta_tu_plan_y_consumos" data-sub-category="consulta_consumos"
+      >
         <img
           src="https://www.claro.com.pe/assets/havas/claro-app/assets/consulta.png"
         />
@@ -42,7 +45,11 @@
             stroke-linejoin="round"></path>
         </svg>
       </a>
-      <a class="btn-link" href="#">
+      <a
+        class="btn-link"
+        href="#"
+        data-category="compra_de_paquetes_y_recargas" data-sub-category="comprar_paquetes"
+      >
         <img
           src="https://www.claro.com.pe/assets/havas/claro-app/assets/carrito.png"
         />
@@ -56,7 +63,11 @@
             stroke-linejoin="round"></path>
         </svg>
       </a>
-      <a class="btn-link" href="#">
+      <a
+        class="btn-link"
+        href="#"
+        data-category="claro_hogar_y_recibos_moviles" data-sub-category="paga_con_billetera_digital"
+      >
         <img
           src="https://www.claro.com.pe/assets/havas/claro-app/assets/recibos.png"
         />
@@ -70,7 +81,11 @@
             stroke-linejoin="round"></path>
         </svg>
       </a>
-      <a class="btn-link" href="#">
+      <a
+        class="btn-link"
+        href="#"
+        data-category="debito_automático" data-sub-category="afiliacion_al_debito_automatico"
+      >
         <img
           src="https://www.claro.com.pe/assets/havas/claro-app/assets/afiliate.png"
         />
@@ -84,7 +99,9 @@
             stroke-linejoin="round"></path>
         </svg>
       </a>
-      <a class="btn-link" href="#" data-category="claro_hogar_y_recibos_moviles" data-sub-category="paga_con_tarjeta">
+      <a class="btn-link" href="#"
+        data-category="gestion_de_servicios_claro_hogar" data-sub-category="servicios_claro_hogar"
+      >
         <img
           src="https://www.claro.com.pe/assets/havas/claro-app/assets/home.png"
         />
@@ -98,7 +115,9 @@
             stroke-linejoin="round"></path>
         </svg>
       </a>
-      <a class="btn-link" href="#">
+      <a class="btn-link" href="#"
+        data-category="visualizacion_de_recibos_pagados" data-sub-category="historial_de_recibos_pagados"
+      >
         <img
           src="https://www.claro.com.pe/assets/havas/claro-app/assets/visualizacion-recibos.png"
         />
@@ -232,7 +251,7 @@
     height: 40px;
     margin: auto;
     border-radius: 24px;
-
+    transition: all 0.3s ease-in-out;
     background: linear-gradient(
       90deg,
       rgba(218, 41, 28, 1) 0%,
@@ -246,6 +265,9 @@
     font-family: Roboto;
     font-size: 16px;
     text-decoration: none;
+  }
+  .about .about-description .btn-about:hover{
+    transform: translateY(-3px);
   }
 
   @media (min-width: 1024px) {

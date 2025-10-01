@@ -8,7 +8,7 @@
     <h2>Ingresar a Mi Claro App nunca fué tan fácil</h2>
     <p>
       ¡Tienes la solución en tus manos! Descárgala, regístrate y empieza a
-      usarla de forma muy sencilla con tu número celular o DNI
+      usarla de forma muy sencilla con tu número celular o DNI.
     </p>
   </div>
 
@@ -23,7 +23,7 @@
 
     <!-- Celular Content -->
     <div class="tab-content" data-content="celular">
-      <div class="phone-steps" id="phoneStepsCelular">
+      <div class="phone-steps md:max-w-[640px] lg:max-w-auto mx-auto" id="phoneStepsCelular">
         <!-- Step 1 -->
         <div class="step-item">
           <div class="phone-container">
@@ -78,7 +78,7 @@
       </div>
 
       <!-- Custom Arrows for Celular -->
-      <div class="custom-arrows" id="arrowsCelular">
+      <div class="custom-arrows md:px-6" id="arrowsCelular">
         <button class="arrow-btn prev" id="prevCelular">
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -116,7 +116,7 @@
 
     <!-- DNI Content -->
     <div class="tab-content hidden" data-content="dni">
-      <div class="phone-steps" id="phoneStepsDni">
+      <div class="phone-steps md:max-w-[640px] lg:max-w-auto mx-auto" id="phoneStepsDni">
         <!-- DNI Step 1 -->
         <div class="step-item">
           <div class="phone-container">
@@ -383,8 +383,8 @@
   .phone-container img {
     width: 100%;
     min-width: 100%;
-    height: 100%;
-    min-height: 100%;
+    /* height: 100%;
+    min-height: 100%; */
   }
 
   @media (max-width: 767px) {
@@ -451,74 +451,76 @@
 </style>
 
 <script is:inline>
-  /* ======================================================
-  TABS
-  ====================================================== */
-  // Tab functionality
-  const mainSection = document.querySelector('.ingresar');
-  const tabButtons = mainSection.querySelectorAll('.tab-button');
-  const tabContents = mainSection.querySelectorAll('.tab-content');
-  const initializedSliders = new Set();
+  document.addEventListener('DOMContentLoaded', function() {
 
-  function switchTab(targetTab) {
-
-      // Update button states
-      tabButtons.forEach(btn => {
-          btn.classList.toggle('active', btn.dataset.tab === targetTab);
-      });
-
-      // Update content visibility
-      tabContents.forEach(content => {
-          content.classList.toggle('hidden', content.dataset.content !== targetTab);
-      });
-
-      // Initialize slider for the active tab if not already initialized
-      if (targetTab === 'celular' && !initializedSliders.has('celular')) {
-          initSlider('#phoneStepsCelular', '#arrowsCelular', '#prevCelular', '#nextCelular');
-          initializedSliders.add('celular');
-      } else if (targetTab === 'dni' && !initializedSliders.has('dni')) {
-          initSlider('#phoneStepsDni', '#arrowsDni', '#prevDni', '#nextDni');
-          initializedSliders.add('dni');
-      }
-
-      // Refresh slider if already initialized
-      setTimeout(() => {
-          if (targetTab === 'celular' && initializedSliders.has('celular')) {
-              $('#phoneStepsCelular').slick('refresh');
-          } else if (targetTab === 'dni' && initializedSliders.has('dni')) {
-              $('#phoneStepsDni').slick('refresh');
-          }
-      }, 100);
-  }
-
-  tabButtons.forEach(button => {
-      button.addEventListener('click', () => {
-          switchTab(button.dataset.tab);
-      });
-  });
-
-  // Slider functionality - VERSIÓN FINAL
-  function initSlider(sliderId, arrowsId, prevId, nextId) {
+    /* ======================================================
+    TABS
+    ====================================================== */
+    // Tab functionality
+    const mainSection = document.querySelector('.ingresar');
+    const tabButtons = mainSection.querySelectorAll('.tab-button');
+    const tabContents = mainSection.querySelectorAll('.tab-content');
+    const initializedSliders = new Set();
+  
+    function switchTab(targetTab) {
+  
+        // Update button states
+        tabButtons.forEach(btn => {
+            btn.classList.toggle('active', btn.dataset.tab === targetTab);
+        });
+  
+        // Update content visibility
+        tabContents.forEach(content => {
+            content.classList.toggle('hidden', content.dataset.content !== targetTab);
+        });
+  
+        // Initialize slider for the active tab if not already initialized
+        if (targetTab === 'celular' && !initializedSliders.has('celular')) {
+            initSlider('#phoneStepsCelular', '#arrowsCelular', '#prevCelular', '#nextCelular');
+            initializedSliders.add('celular');
+        } else if (targetTab === 'dni' && !initializedSliders.has('dni')) {
+            initSlider('#phoneStepsDni', '#arrowsDni', '#prevDni', '#nextDni');
+            initializedSliders.add('dni');
+        }
+  
+        // Refresh slider if already initialized
+        setTimeout(() => {
+            if (targetTab === 'celular' && initializedSliders.has('celular')) {
+                $('#phoneStepsCelular').slick('refresh');
+            } else if (targetTab === 'dni' && initializedSliders.has('dni')) {
+                $('#phoneStepsDni').slick('refresh');
+            }
+        }, 100);
+    }
+  
+    tabButtons.forEach(button => {
+        button.addEventListener('click', () => {
+            switchTab(button.dataset.tab);
+        });
+    });
+  
+    // Slider functionality - VERSIÓN FINAL
+    function initSlider(sliderId, arrowsId, prevId, nextId) {
       const slider = document.querySelector(sliderId);
       const arrows = document.querySelector(arrowsId);
       const prevBtn = document.querySelector(prevId);
       const nextBtn = document.querySelector(nextId);
       const items = slider.querySelectorAll('.step-item');
-
+  
       let currentSlide = 0;
-
+  
       function getSlidesToShow() {
           if (window.innerWidth < 768) return 1;
           if (window.innerWidth < 1024) return 2;
           return 4; 
       }
-
+  
       function shouldShowDots() {
           const totalSlides = items.length;
           const slidesToShow = getSlidesToShow();
           return totalSlides > slidesToShow;
       }
-
+  
       function updateArrowsAndDotsVisibility() {
           const totalSlides = items.length;
           const slidesToShow = getSlidesToShow();
@@ -540,22 +542,22 @@
               }
           }
       }
-
+  
       function updateArrowStates(current) {
           const slidesToShow = getSlidesToShow();
           const maxSlide = Math.max(0, items.length - slidesToShow);
           prevBtn.classList.toggle('disabled', current === 0);
           nextBtn.classList.toggle('disabled', current >= maxSlide);
       }
-
+  
       // Check if slider is already initialized
       if ($(slider).hasClass('slick-initialized')) {
           $(slider).slick('unslick');
       }
-
+  
       // CONFIGURACIÓN INTELIGENTE: Determinar settings desde el inicio
       const needsDots = shouldShowDots();
-
+  
       // Initialize Slick
       $(slider).on('init', function(event, slick) {
           setTimeout(() => {
@@ -563,13 +565,13 @@
               updateArrowStates(0);
           }, 0);
       });
-
+  
       $(slider).on('afterChange', function(event, slick, current) {
           currentSlide = current;
           updateArrowStates(current);
           updateArrowsAndDotsVisibility();
       });
-
+  
       // CONFIGURACIÓN SLICK OPTIMIZADA
       $(slider).slick({
           dots: needsDots, // Solo si realmente se necesitan
@@ -596,16 +598,16 @@
                 }
             ]
         });
-
+  
         // Custom arrow events
         prevBtn.addEventListener('click', () => {
             $(slider).slick('slickPrev');
         });
-
+  
         nextBtn.addEventListener('click', () => {
             $(slider).slick('slickNext');
         });
-
+  
         // Handle window resize - OPTIMIZADO
         let resizeTimeout;
         window.addEventListener('resize', () => {
@@ -616,8 +618,9 @@
             }, 250);
         });
     }
-
+  
     // Initialize the first slider (celular tab is active by default)
     initSlider('#phoneStepsCelular', '#arrowsCelular', '#prevCelular', '#nextCelular');
     initializedSliders.add('celular');
+  });
 </script>
