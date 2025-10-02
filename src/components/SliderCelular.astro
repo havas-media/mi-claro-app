@@ -1,0 +1,80 @@
+---
+import bg_mobile from "@/assets/bg_celular_mobile.png";
+import bg_desktop from "@/assets/bg_celular_desktop.png";
+import "swiper/css/bundle";
+---
+
+<section class="relative pt-5">
+  <div class="container">
+    <div class="box_container px-5 py-6 lg:py-10 lg:px-16 relative rounded-2xl xl:rounded-4xl overflow-hidden">
+      <picture class="w-full h-full absolute top-0 left-0">
+        <source media="(min-width: 1024px)" srcset={bg_desktop.src} />
+        <img class="w-full h-full object-cover" src={bg_mobile.src} alt="" />
+      </picture>
+      <div class="swiper_celular swiper relative z-10">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <div class="flex flex-col gap-1.5 xl:gap-2.5">
+              <h3 class="font-amx-bold text-2xl lg:text-3xl w-full text-center">Celulares</h3>
+              <p class="font-amx-regular text-base lg:text-lg text-center">Un <strong class="font-amx-bold">celular</strong> o <strong class="font-amx-bold">smartphone</strong> es un dispositivo móvil que permite no solo hacer llamadas, sino también conectarte a internet, usar aplicaciones, tomar fotos, grabar videos, trabajar o divertirte en cualquier lugar. Hoy en día existen <strong class="font-amx-bold">celulares de diferentes gamas y precios</strong>, diseñados para cubrir todas las necesidades: desde los <strong class="font-amx-bold">celulares básicos</strong> y económicos hasta los smartphones con tecnología de última generación.</p>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="flex flex-col gap-1.5 xl:gap-2.5">
+              <h3 class="font-amx-bold text-2xl lg:text-3xl w-full text-center">Celulares baratos en Perú</h3>
+              <p class="font-amx-regular text-base lg:text-lg text-center">Si buscas <strong class="font-amx-bold">celulares baratos</strong> y accesibles, en Claro encontrarás una gran variedad de <strong class="font-amx-bold">celulares económicos</strong> de marcas reconocidas como Honor, Motorola, ZTE, y más; que combinan excelente rendimiento con precios accesibles. Estos equipos son ideales para quienes necesitan un smartphone funcional para redes sociales, llamadas y navegación sin gastar de más.</p>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="flex flex-col gap-1.5 xl:gap-2.5">
+              <h3 class="font-amx-bold text-2xl lg:text-3xl w-full text-center">Ofertas de celulares</h3>
+              <p class="font-amx-regular text-base lg:text-lg text-center">Disfruta las <strong class="font-amx-bold">ofertas de celulares</strong> Claro con descuentos exclusivos y beneficios Full Claro. Encuentra promociones en celulares de gama alta, celulares liberados de las <strong class="font-amx-bold">marcas como Samsung, Apple, Xiaomi, Huawei</strong> y más; todo con <a href="https://www.claro.com.pe/personas/movil/postpago/" class="font-amx-bold underline">planes postpago</a> que se adaptan a ti. Los mejores smartphones y últimos lanzamientos ya están en Claro.</p>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="flex flex-col gap-1.5 xl:gap-2.5">
+              <h3 class="font-amx-bold text-2xl lg:text-3xl w-full text-center">Mejores celulares con buena cámara</h3>
+              <p class="font-amx-regular text-base lg:text-lg text-center">Para los amantes de la fotografía, los <strong class="font-amx-bold">celulares con buena cámara</strong> son la mejor opción. En Claro puedes encontrar <strong class="font-amx-bold">smartphones de gama media y gama alta</strong> que ofrecen lentes de gran resolución, modos nocturnos y cámaras múltiples para capturar cada detalle. Marcas como <strong class="font-amx-bold">Samsung, iPhone y Xiaomi</strong> destacan entre los preferidos por su calidad de imagen y estabilidad en grabaciones.</p>
+            </div>
+          </div>
+        </div>
+        <div class="flex flex-row gap-4 justify-center items-center relative mt-4 xl:mt-7">
+          <div class="swiper-button-prev relative mt-0 top-0 left-0 after:hidden border-2 text-claro border-claro bg-transparent hover:text-white hover:border-claro hover:bg-claro rounded-full transition-all w-[32px] h-[32px] duration-200 ease-out">
+            <svg class="w-[17px] h-[10px]" width="18" height="12" viewBox="0 0 18 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M0.719453 5.72128C0.429453 6.01428 0.429453 6.48827 0.719453 6.78127L5.48947 11.5543C5.78947 11.8473 6.25953 11.8473 6.54953 11.5543C6.84953 11.2613 6.84953 10.7873 6.54953 10.4943L2.30954 6.25127L6.54953 2.00826C6.84953 1.71526 6.84953 1.24127 6.54953 0.948266C6.25953 0.655266 5.78947 0.655266 5.48947 0.948266L0.719453 5.72128ZM17.2495 7.00127C17.6595 7.00127 17.9995 6.66527 17.9995 6.25127C17.9995 5.83727 17.6595 5.50127 17.2495 5.50127V7.00127ZM1.24948 7.00127H17.2495V5.50127H1.24948V7.00127Z" fill="currentColor"/>
+            </svg>          
+          </div>
+          <div class="swiper-pagination w-fit relative top-0 bottom-0 mt-0 font-roboto font-medium text-base"></div>
+          <div class="swiper-button-next relative mt-0 after:hidden border-2 text-claro border-claro bg-transparent hover:text-white hover:border-claro hover:bg-claro rounded-full top-0 right-0 transition-all w-[32px] h-[32px] duration-200 ease-out">
+            <svg class="w-[17px] h-[10px]" width="18" height="12" viewBox="0 0 18 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M17.782 6.78117C18.072 6.48817 18.072 6.01417 17.782 5.72117L13.012 0.948157C12.712 0.655157 12.2419 0.655157 11.9519 0.948157C11.6519 1.24116 11.6519 1.71515 11.9519 2.00815L16.1919 6.25117L11.9519 10.4942C11.6519 10.7872 11.6519 11.2612 11.9519 11.5542C12.2419 11.8472 12.712 11.8472 13.012 11.5542L17.782 6.78117ZM1.25198 5.50117C0.841982 5.50117 0.501982 5.83717 0.501982 6.25117C0.501982 6.66517 0.841982 7.00117 1.25198 7.00117L1.25198 5.50117ZM17.252 5.50117L1.25198 5.50117L1.25198 7.00117L17.252 7.00117L17.252 5.50117Z" fill="currentColor"/>
+            </svg>          
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<script>
+  import Swiper from "swiper/bundle";
+  const swiper = new Swiper(".swiper_celular", {
+    slidesPerView: 1,
+    spaceBetween: 20,
+    pagination: {
+      el: ".swiper_celular .swiper-pagination",
+      type: "fraction",
+    },
+    autoHeight: false,
+    navigation: {
+      nextEl: ".swiper_celular .swiper-button-next",
+      prevEl: ".swiper_celular .swiper-button-prev",
+    },
+    breakpoints: {
+      768: {
+        autoHeight: false,
+      },
+    },
+  });
+</script>

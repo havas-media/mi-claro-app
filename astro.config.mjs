@@ -8,7 +8,7 @@ export default defineConfig({
   compressHTML: false,
   build: {
     assets: '_assets',
-    assetsPrefix: 'https://www.claro.com.pe/assets/havas/mi-claro-app'
+    assetsPrefix: 'https://www.claro.com.pe/assets/havas/celulares'
   },
   vite: {
     plugins: [tailwindcss()]
