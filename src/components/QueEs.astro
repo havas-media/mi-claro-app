@@ -369,6 +369,13 @@
         detail: { category, subCategory }
       });
       document.dispatchEvent(event);
+      //Hacer scrollTo 
+      setTimeout(() => {
+        window.scrollTo({
+          top: 0,
+          behavior: 'smooth'
+        });
+      }, 250);
     });
   });
   

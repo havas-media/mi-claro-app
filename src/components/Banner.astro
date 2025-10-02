@@ -1,0 +1,28 @@
+---
+import banner_mobile from "@/assets/banner_hero_mobile.webp";
+import banner_desktop from "@/assets/banner_hero_desktop.webp";
+import logo_app from "@/assets/logo_app_claro.svg";
+import logos_qrs from "@/assets/logos_qrs.png";
+import Button from "@UI/Button.astro"
+---
+
+<section class="p-0 md:pb-4 relative main_section">
+  <picture class="flex w-full h-auto relative">
+    <source media="(min-width: 768px)" srcset={banner_desktop.src} />
+    <img
+      class="w-full h-full object-cover"
+      src={banner_mobile.src}
+      alt="ESIM"
+    />
+  </picture>
+  <div class="absolute top-0 w-full h-full left-0 z-10">
+    <div class="container md:px-[20px] pt-14 lg:pt-20 xl:pt-0 w-full flex flex-col gap-2 md:gap-3 relative xl:top-1/2 xl:-translate-y-1/2">
+      <p class="font-amx-bold text-left text-balance leading-none h-fit text-3xl md:text-xl lg:text-2xl text-white xl:hidden" data-aos="fade-up">Mi Claro App</p>
+      <img class="max-w-[180px] hidden xl:block" src={logo_app.src} alt="logos" />
+      <h1 class="font-amx-bold text-left text-balance leading-[1.2] h-fit xl:text-[40px] text-white hidden xl:block xl:max-w-[620px]" data-aos="fade-up">Gestiona tus servicios Claro de manera rápida y sencilla.</h1>
+      <p class="text-white text-lg md:text-base lg:text-lg font-roboto font-medium leading-[1.2] xl:hidden">La solución la tienes tú mismo, los 7 días de la semana.</p>
+      <Button as="a" target="_blank" href="#" classes="bg-gradient-to-l from-[#B52217] to-[#DA291C] text-white px-9 py-3 text-lg shadow-lg/20 xl:hidden">Descarga la app</Button>
+      <img class="max-w-[410px] hidden xl:block" src={logos_qrs.src} alt="qrs" />
+    </div>
+  </div>
+</section>

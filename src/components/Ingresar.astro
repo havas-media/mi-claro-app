@@ -1,5 +1,12 @@
 ---
-
+import celular_01 from "@/assets/ingresar/celular_01.webp";
+import celular_02 from "@/assets/ingresar/celular_02.webp";
+import celular_03 from "@/assets/ingresar/celular_03.webp";
+import celular_04 from "@/assets/ingresar/celular_04.webp";
+import dni_01 from "@/assets/ingresar/dni_01.webp";
+import dni_02 from "@/assets/ingresar/dni_02.webp";
+import dni_03 from "@/assets/ingresar/dni_03.webp";
+import dni_04 from "@/assets/ingresar/dni_04.webp";
 ---
 
 <!-- INGRESAR -->
@@ -23,12 +30,12 @@
 
     <!-- Celular Content -->
     <div class="tab-content" data-content="celular">
-      <div class="phone-steps md:max-w-[640px] lg:max-w-auto mx-auto" id="phoneStepsCelular">
+      <div class="phone-steps md:max-w-[540px] lg:max-w-max mx-auto" id="phoneStepsCelular">
         <!-- Step 1 -->
         <div class="step-item">
           <div class="phone-container">
             <img
-              src="https://www.claro.com.pe/assets/havas/claro-app/assets/phone-1.png"
+              src={celular_01.src}
               alt=""
             />
           </div>
@@ -41,7 +48,7 @@
         <div class="step-item">
           <div class="phone-container">
             <img
-              src="https://www.claro.com.pe/assets/havas/claro-app/assets/phone-2.png"
+              src={celular_02.src}
               alt=""
             />
           </div>
@@ -54,7 +61,7 @@
         <div class="step-item">
           <div class="phone-container">
             <img
-              src="https://www.claro.com.pe/assets/havas/claro-app/assets/phone-3.png"
+              src={celular_03.src}
               alt=""
             />
           </div>
@@ -67,7 +74,7 @@
         <div class="step-item">
           <div class="phone-container">
             <img
-              src="https://www.claro.com.pe/assets/havas/claro-app/assets/phone-4.png"
+              src={celular_04.src}
               alt=""
             />
           </div>
@@ -116,12 +123,12 @@
 
     <!-- DNI Content -->
     <div class="tab-content hidden" data-content="dni">
-      <div class="phone-steps md:max-w-[640px] lg:max-w-auto mx-auto" id="phoneStepsDni">
+      <div class="phone-steps lg:max-w-auto mx-auto" id="phoneStepsDni">
         <!-- DNI Step 1 -->
         <div class="step-item">
           <div class="phone-container">
             <img
-              src="https://www.claro.com.pe/assets/havas/claro-app/assets/dni-1.png"
+              src={dni_01.src}
               alt=""
             />
           </div>
@@ -136,7 +143,7 @@
         <div class="step-item">
           <div class="phone-container">
             <img
-              src="https://www.claro.com.pe/assets/havas/claro-app/assets/dni-2.png"
+              src={dni_02.src}
               alt=""
             />
           </div>
@@ -149,7 +156,7 @@
         <div class="step-item">
           <div class="phone-container">
             <img
-              src="https://www.claro.com.pe/assets/havas/claro-app/assets/dni-3.png"
+              src={dni_03.src}
               alt=""
             />
           </div>
@@ -162,7 +169,7 @@
         <div class="step-item">
           <div class="phone-container">
             <img
-              src="https://www.claro.com.pe/assets/havas/claro-app/assets/dni-4.png"
+              src={dni_04.src}
               alt=""
             />
           </div>
@@ -257,7 +264,7 @@
 
   /* Tabs */
   .tabs-container {
-    border-bottom: 1px solid #e9ecef;
+    /* border-bottom: 1px solid #e9ecef; */
     background: #fff;
   }
 
@@ -376,15 +383,23 @@
   /* Phone Container - SOLO ESPACIO PARA IMAGEN */
   .phone-container {
     width: fit-content;
-    height: 400px;
+    height: auto;
     margin: 0 auto 15px;
   }
 
   .phone-container img {
     width: 100%;
     min-width: 100%;
-    /* height: 100%;
-    min-height: 100%; */
+    max-height: 440px;
+    min-height: 440px;
+    height: 100%;
+    object-fit: cover;
+  }
+  @media (max-width: 1024px) {
+    .phone-container img {
+      max-height: 360px;
+      min-height: 360px;
+    }
   }
 
   @media (max-width: 767px) {

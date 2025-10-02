@@ -19,7 +19,8 @@ import "swiper/css/bundle";
       </svg>
       <span>Volver al inicio</span>
     </button>
-    <h2 class="text-2xl lg:text-4xl font-bold text-center text-[#3c3c3c] mb-10 xl:mb-6 claro-recibos__title">
+
+    <h2 class="text-2xl lg:text-4xl font-bold text-center text-[#3c3c3c] my-3 md:my-4 xl:my-6 claro-recibos__title">
       Claro Hogar y recibos móviles
     </h2>
 
@@ -700,7 +701,7 @@ import "swiper/css/bundle";
   };
 
   const generateHeaderTabs = (category) => {
-    const tabsContainer = document.querySelector('.tabs-container .tabs-wrapper');
+    const tabsContainer = document.querySelector('.recibos-section .tabs-container .tabs-wrapper');
     if (!tabsContainer) return;
     
     let tabsHTML = '';
@@ -714,12 +715,13 @@ import "swiper/css/bundle";
     categoryData.subCategories.forEach((subCategory) => {
       tabsHTML += templateButtonTab(category, subCategory.slug, subCategory.name, subCategory.icon);
     });
+    console.log(tabsHTML)
     
     tabsContainer.innerHTML = tabsHTML;
     document.querySelector(".claro-recibos__title").textContent = categoryData.name;
     
     // Inicializar los botones de tabs
-    const tabButtons = document.querySelectorAll('.tab-button');
+    const tabButtons = document.querySelectorAll('.recibos-section .tabs-container .tab-button');
     tabButtons.forEach(button => {
       button.addEventListener('click', function() {
         tabButtons.forEach(btn => btn.classList.remove('active'));
@@ -754,7 +756,7 @@ import "swiper/css/bundle";
       if (initialCategory && initialSubCategory) {
         generateHeaderTabs(initialCategory);
         // Event listeners para los botones de tabs
-        const tabButtons = document.querySelectorAll('.tab-button');
+        const tabButtons = document.querySelectorAll('.recibos-section .tabs-container .tab-button');
         // Activar el botón correspondiente
         tabButtons.forEach(btn => {
           if (btn.getAttribute('data-category') === initialCategory && 
@@ -776,7 +778,7 @@ import "swiper/css/bundle";
   window.addEventListener('popstate', function(event) {
     if (event.state) {
       const { category, subCategory } = event.state;
-      const tabButtons = document.querySelectorAll('.tab-button');
+      const tabButtons = document.querySelectorAll('.recibos-section .tabs-container .tab-button');
       // Activar el botón correspondiente
       tabButtons.forEach(btn => {
         btn.classList.remove('active');
@@ -801,7 +803,7 @@ import "swiper/css/bundle";
     const { category, subCategory } = e.detail;
     generateHeaderTabs(category);
     // Activar el botón correspondiente
-    const tabButtons = document.querySelectorAll('.tab-button');
+    const tabButtons = document.querySelectorAll('.recibos-section .tabs-container .tab-button');
     tabButtons.forEach(btn => {
       btn.classList.remove('active');
       if (btn.getAttribute('data-category') === category && btn.getAttribute('data-sub-category') === subCategory) {

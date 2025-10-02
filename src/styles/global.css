@@ -118,4 +118,11 @@
 .tutorial-content{
   --swiper-navigation-size: 16px;
   --swiper-navigation-color: #3C3C3C;
+  & .swiper-pagination-bullet{
+    transition: all 0.3s ease;
+    transform: scale(1);
+  }
+  & .swiper-pagination-bullet.swiper-pagination-bullet-active{
+    transform: scale(1.2);
+  }
 }
