@@ -3,6 +3,7 @@ import billeteraDigitalIcon from "@/assets/claro_hogar_y_recibos_moviles/icon_01
 import tarjetaIcon from "@/assets/claro_hogar_y_recibos_moviles/icon_02.png";
 import billetera_01 from "@/assets/claro_hogar_y_recibos_moviles/paga_con_billetera_digital/paso_01.png";
 import googlePlay from "@/assets/googleplay.png";
+import nuevoQR from "@/assets/nuevoQR.png";
 import huawei from "@/assets/huawei.png";
 import appStore from "@/assets/appstore.png";
 import qrApp from "@/assets/qr-app.jpg";
@@ -173,14 +174,18 @@ import "swiper/css/bundle";
                   class="tutorial-qr_apps hidden md:flex items-center gap-2.5"
                 >
                   <div class="qr-app text-center">
+                    <!-- 
                     <p class="text-sm mb-1">Googleplay</p>
+                     -->
                     <img
-                      src={googlePlay.src}
+                      src={nuevoQR.src}
                       alt="QR Googleplay"
                       class="w-15 h-15 mx-auto"
+                      style="width: 80px !important;
+    height: auto !important;"
                     />
                   </div>
-
+                  <!-- 
                   <div class="qr-app text-center">
                     <p class="text-sm mb-1">Huawei</p>
                     <img
@@ -198,6 +203,7 @@ import "swiper/css/bundle";
                       class="w-15 h-15 mx-auto"
                     />
                   </div>
+                   -->
                 </div>
 
                 <!-- Main QR - Shown on mobile -->
