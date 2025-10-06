@@ -9,51 +9,73 @@ import qrApp from "@/assets/qr-app.jpg";
 import "swiper/css/bundle";
 ---
 
-
 <section class="claro-recibos detail_intern hidden py-10">
   <div class="container mx-auto px-4">
-    <button class="claro-recibos_back border-0 cursor-pointer bg-white flex items-center gap-2.5 font-amx-medium text-base lg:text-lg text-[#00818F]">
-      <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <path d="M2 16C2 23.7322 8.26779 30 16 30C23.7322 30 30 23.7322 30 16C30 8.26778 23.7322 2 16 2C8.26779 2 2 8.26778 2 16ZM1.39876e-06 16C2.1713e-06 7.16321 7.16322 -2.1713e-06 16 -1.39876e-06C24.8368 -6.26228e-07 32 7.16322 32 16C32 24.8368 24.8368 32 16 32C7.16322 32 6.26228e-07 24.8368 1.39876e-06 16Z" fill="#00818F"/>
-        <path d="M18.5929 22.003C18.2018 22.393 17.5688 22.3921 17.1788 22.0011L11.8985 16.7061C11.5095 16.3159 11.5095 15.6843 11.8985 15.294L17.1788 9.99911C17.5688 9.60803 18.2018 9.60719 18.5929 9.99716C18.9838 10.3871 18.9848 11.0202 18.5948 11.4112L14.0186 16.0001L18.5948 20.589C18.9848 20.98 18.9839 21.613 18.5929 22.003Z" fill="#00818F"/>
+    <button
+      class="claro-recibos_back border-0 cursor-pointer bg-white flex items-center gap-2.5 font-amx-medium text-base lg:text-lg text-[#00818F]"
+    >
+      <svg
+        width="32"
+        height="32"
+        viewBox="0 0 32 32"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          d="M2 16C2 23.7322 8.26779 30 16 30C23.7322 30 30 23.7322 30 16C30 8.26778 23.7322 2 16 2C8.26779 2 2 8.26778 2 16ZM1.39876e-06 16C2.1713e-06 7.16321 7.16322 -2.1713e-06 16 -1.39876e-06C24.8368 -6.26228e-07 32 7.16322 32 16C32 24.8368 24.8368 32 16 32C7.16322 32 6.26228e-07 24.8368 1.39876e-06 16Z"
+          fill="#00818F"></path>
+        <path
+          d="M18.5929 22.003C18.2018 22.393 17.5688 22.3921 17.1788 22.0011L11.8985 16.7061C11.5095 16.3159 11.5095 15.6843 11.8985 15.294L17.1788 9.99911C17.5688 9.60803 18.2018 9.60719 18.5929 9.99716C18.9838 10.3871 18.9848 11.0202 18.5948 11.4112L14.0186 16.0001L18.5948 20.589C18.9848 20.98 18.9839 21.613 18.5929 22.003Z"
+          fill="#00818F"></path>
       </svg>
       <span>Volver al inicio</span>
     </button>
 
-    <h2 class="text-2xl lg:text-4xl font-bold text-center text-[#3c3c3c] my-3 md:my-4 xl:my-6 claro-recibos__title">
+    <h2
+      class="text-2xl lg:text-4xl font-bold text-center text-[#3c3c3c] my-3 md:my-4 xl:my-6 claro-recibos__title"
+    >
       Claro Hogar y recibos móviles
     </h2>
 
     <div class="recibos-section max-w-6xl mx-auto rounded-2xl overflow-hidden">
       <!-- Tabs -->
       <div class="tabs-container overflow-x-auto flex items-end">
-        <div class="tabs-wrapper flex flex-row justify-start md:justify-center md:mx-auto">
-          <button 
+        <div
+          class="tabs-wrapper flex flex-row justify-start md:justify-center md:mx-auto"
+        >
+          <button
             class="tab-button group flex items-center gap-2.5 p-4 md:p-5 md:py-3 text-left font-bold text-base md:text-lg text-[#6c6c6c] bg-transparent border-none cursor-pointer relative w-fit transition-all duration-500 hover:text-[#3c3c3c]"
             data-category="claro_hogar_y_recibos_moviles"
             data-sub-category="paga_con_billetera_digital"
           >
-            <img 
-              src={billeteraDigitalIcon.src} 
-              alt="Icono de billetera" 
+            <img
+              src={billeteraDigitalIcon.src}
+              alt="Icono de billetera"
               class="grayscale group-[.active]:grayscale-0 transition-all duration-500"
             />
-            <p class="text-sm md:text-base whitespace-nowrap">Paga con billetera digital</p>
-            <div class="absolute bottom-0 left-0 right-0 w-full h-0.5 bg-gradient-to-r from-transparent via-[#b9b9b9] to-transparent group-[.active]:via-[#da291c] transition-all duration-500"></div>
+            <p class="text-sm md:text-base whitespace-nowrap">
+              Paga con billetera digital
+            </p>
+            <div
+              class="absolute bottom-0 left-0 right-0 w-full h-0.5 bg-gradient-to-r from-transparent via-[#b9b9b9] to-transparent group-[.active]:via-[#da291c] transition-all duration-500"
+            >
+            </div>
           </button>
-          
-          <button 
+          <button
             class="tab-button group flex flex-row items-center gap-2.5 p-4 md:p-5 md:py-3 text-left font-bold text-base md:text-lg text-[#6c6c6c] bg-transparent border-none cursor-pointer relative w-[240px] transition-all duration-500 hover:text-[#3c3c3c]"
             data-category="claro_hogar_y_recibos_moviles"
             data-sub-category="paga_con_tarjeta"
           >
-            <img 
-              src={tarjetaIcon.src} 
-              alt="Icono de tarjeta" 
+            <img
+              src={tarjetaIcon.src}
+              alt="Icono de tarjeta"
               class="grayscale group-[.active]:grayscale-0 transition-all duration-500"
             />
             <p class="text-sm md:text-base">Paga con tarjeta</p>
-            <div class="absolute bottom-0 left-0 right-0 w-full h-0.5 bg-gradient-to-r from-transparent via-[#b9b9b9] to-transparent group-[.active]:via-[#da291c] transition-all duration-500"></div>
+            <div
+              class="absolute bottom-0 left-0 right-0 w-full h-0.5 bg-gradient-to-r from-transparent via-[#b9b9b9] to-transparent group-[.active]:via-[#da291c] transition-all duration-500"
+            >
+            </div>
           </button>
         </div>
       </div>
@@ -61,23 +83,38 @@ import "swiper/css/bundle";
       <!-- Billetera Digital Content -->
       <div class="tab-content relative pt-5">
         <!-- Contenedor del Tutorial -->
-        <div class="billetera-digital-container md:flex md:justify-between lg:justify-center items-center bg-white rounded-2xl py-4 pb-0 md:p-6 lg:p-8 xl:pt-1 gap-4 lg:gap-8">
+        <div
+          class="billetera-digital-container md:flex md:justify-between lg:justify-center items-center bg-white rounded-2xl py-4 pb-0 md:p-6 lg:p-8 xl:pt-1 gap-4 lg:gap-8"
+        >
           <!-- Tutorial Info - Ordenado primero en móvil -->
-          <div class="tutorial-info md:w-[calc(100%-220px)] lg:w-[500px] flex flex-col justify-center order-1 md:order-2">
+          <div
+            class="tutorial-info md:w-[calc(100%-220px)] lg:w-[500px] flex flex-col justify-center order-1 md:order-2"
+          >
             <div class="tutorial-content flex-col items-start md:px-7 relative">
-              <div class="bg-[#f4f4f4] w-full max-w-full rounded-xl lg:h-[160px] ">
-                <div class="tutorial-pagination flex items-center gap-1 px-6 pt-4 font-normal text-sm text-[#6c6c6c]">
-                  <span class="current-step">1</span> de <span class="total-steps">4</span> pasos
+              <div
+                class="bg-[#f4f4f4] w-full max-w-full rounded-xl lg:h-[160px]"
+              >
+                <div
+                  class="tutorial-pagination flex items-center gap-1 px-6 pt-4 font-normal text-sm text-[#6c6c6c]"
+                >
+                  <span class="current-step">1</span> de <span
+                    class="total-steps">4</span
+                  > pasos
                 </div>
                 <!-- Swiper container -->
                 <div class="swiper tutorial-swiper px-6 pt-1 pb-4 relative">
                   <div class="swiper-wrapper">
                     <!-- Slide 1 -->
                     <div class="swiper-slide">
-                      <div class="tutorial-content_info relative rounded-lg mx-auto">
-                        <p id="tutorial-description" class="font-normal text-lg text-[#3c3c3c] mb-0 leading-[1.4]">
-                          Ingresa a Mi Claro App en tu servicio postpago o Claro Hogar y
-                          selecciona el ícono
+                      <div
+                        class="tutorial-content_info relative rounded-lg mx-auto"
+                      >
+                        <p
+                          id="tutorial-description"
+                          class="font-normal text-lg text-[#3c3c3c] mb-0 leading-[1.4]"
+                        >
+                          Ingresa a Mi Claro App en tu servicio postpago o Claro
+                          Hogar y selecciona el ícono
                         </p>
                       </div>
                     </div>
@@ -86,36 +123,80 @@ import "swiper/css/bundle";
               </div>
               <div class="hidden md:flex btns_swiper">
                 <!-- Navigation buttons -->
-                <div class="swiper-button-prev after:hidden border-2 -left-4 top-14 text-gray-700 hover:text-white border-gray-700 bg-transparent hover:border-gray-700 hover:bg-gray-700 rounded-full w-[40px] h-[40px] transition-colors duration-200 ease-out">
-                  <svg class="size-4" width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M16 9.17822H2M2 9.17822L9 2.17822M2 9.17822L9 16.1782" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+                <div
+                  class="swiper-button-prev after:hidden border-2 -left-4 top-14 text-gray-700 hover:text-white border-gray-700 bg-transparent hover:border-gray-700 hover:bg-gray-700 rounded-full w-[40px] h-[40px] transition-colors duration-200 ease-out"
+                >
+                  <svg
+                    class="size-4"
+                    width="18"
+                    height="18"
+                    viewBox="0 0 18 18"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M16 9.17822H2M2 9.17822L9 2.17822M2 9.17822L9 16.1782"
+                      stroke="currentColor"
+                      stroke-width="3"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"></path>
                   </svg>
                 </div>
-                <div class="swiper-button-next after:hidden border-2 -right-4 top-14 text-gray-700 hover:text-white border-gray-700 bg-transparent hover:border-gray-700 hover:bg-gray-700 rounded-full w-[40px] h-[40px] transition-colors duration-200 ease-out">
-                  <svg class="size-4" width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M2 9.17822H16M16 9.17822L9 2.17822M16 9.17822L9 16.1782" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
-                  </svg>                    
+                <div
+                  class="swiper-button-next after:hidden border-2 -right-4 top-14 text-gray-700 hover:text-white border-gray-700 bg-transparent hover:border-gray-700 hover:bg-gray-700 rounded-full w-[40px] h-[40px] transition-colors duration-200 ease-out"
+                >
+                  <svg
+                    class="size-4"
+                    width="18"
+                    height="18"
+                    viewBox="0 0 18 18"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M2 9.17822H16M16 9.17822L9 2.17822M16 9.17822L9 16.1782"
+                      stroke="currentColor"
+                      stroke-width="3"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"></path>
+                  </svg>
                 </div>
               </div>
               <!-- Pagination bullets -->
               <div class="swiper-pagination relative bottom-0 top-0 mt-3"></div>
               <!-- QR Section -->
-              <div class="tutorial-qr md:w-full flex justify-center items-center md:justify-center gap-5 mx-auto pt-8 pb-4">
+              <div
+                class="tutorial-qr md:w-full flex justify-center items-center md:justify-center gap-5 mx-auto pt-8 pb-4"
+              >
                 <!-- Apps QR - Hidden on mobile -->
-                <div class="tutorial-qr_apps hidden md:flex items-center gap-2.5">
+                <div
+                  class="tutorial-qr_apps hidden md:flex items-center gap-2.5"
+                >
                   <div class="qr-app text-center">
                     <p class="text-sm mb-1">Googleplay</p>
-                    <img src={googlePlay.src} alt="QR Googleplay" class="w-15 h-15 mx-auto" />
+                    <img
+                      src={googlePlay.src}
+                      alt="QR Googleplay"
+                      class="w-15 h-15 mx-auto"
+                    />
                   </div>
 
                   <div class="qr-app text-center">
                     <p class="text-sm mb-1">Huawei</p>
-                    <img src={huawei.src} alt="QR Huawei" class="w-15 h-15 mx-auto" />
+                    <img
+                      src={huawei.src}
+                      alt="QR Huawei"
+                      class="w-15 h-15 mx-auto"
+                    />
                   </div>
 
                   <div class="qr-app text-center">
                     <p class="text-sm mb-1">Appstore</p>
-                    <img src={appStore.src} alt="QR Appstore" class="w-15 h-15 mx-auto" />
+                    <img
+                      src={appStore.src}
+                      alt="QR Appstore"
+                      class="w-15 h-15 mx-auto"
+                    />
                   </div>
                 </div>
 
@@ -125,7 +206,9 @@ import "swiper/css/bundle";
                 </div>
 
                 <div class="tutorial-qr_description">
-                  <h3 class="font-bold text-lg text-[#3c3c3c] mb-1">Mi Claro APP</h3>
+                  <h3 class="font-bold text-lg text-[#3c3c3c] mb-1">
+                    Mi Claro APP
+                  </h3>
                   <p class="font-normal text-base leading-tight text-[#6c6c6c]">
                     Escanea el código <br />y descarga la app
                   </p>
@@ -135,12 +218,14 @@ import "swiper/css/bundle";
           </div>
 
           <!-- Tutorial Image - Ordenado segundo en móvil -->
-          <div class="tutorial-image flex md:max-w-[290px] lg:max-w-[340px] justify-center items-center order-2 md:order-1">
+          <div
+            class="tutorial-image flex md:max-w-[290px] lg:max-w-[340px] justify-center items-center order-2 md:order-1"
+          >
             <div class="tutorial-images-container relative">
               <!-- Imagen para el paso 1 (visible por defecto) -->
-              <img 
-                src={billetera_01.src} 
-                alt="Tutorial paso 1" 
+              <img
+                src={billetera_01.src}
+                alt="Tutorial paso 1"
                 class="tutorial-img w-full h-full rounded-xl object-contain"
               />
             </div>
@@ -163,79 +248,79 @@ import "swiper/css/bundle";
   import paga_con_billetera_digital_paso_06 from "@/assets/claro_hogar_y_recibos_moviles/paga_con_billetera_digital/paso_06.png";
   import paga_con_billetera_digital_paso_07 from "@/assets/claro_hogar_y_recibos_moviles/paga_con_billetera_digital/paso_07.png";
   import paga_con_tarjeta_icon from "@/assets/claro_hogar_y_recibos_moviles/icon_02.png";
-  import paga_con_tarjeta_paso_01 from "@/assets/claro_hogar_y_recibos_moviles/paga_con_tarjeta/paso_01.png";
-  import paga_con_tarjeta_paso_02 from "@/assets/claro_hogar_y_recibos_moviles/paga_con_tarjeta/paso_02.png";
-  import paga_con_tarjeta_paso_03 from "@/assets/claro_hogar_y_recibos_moviles/paga_con_tarjeta/paso_03.png";
-  import paga_con_tarjeta_paso_04 from "@/assets/claro_hogar_y_recibos_moviles/paga_con_tarjeta/paso_04.png";
-  import paga_con_tarjeta_paso_05 from "@/assets/claro_hogar_y_recibos_moviles/paga_con_tarjeta/paso_05.png";
+  import paga_con_tarjeta_paso_01 from "@/assets/claro_hogar_y_recibos_moviles/paga_con_tarjeta/paso_01v2.png";
+  import paga_con_tarjeta_paso_02 from "@/assets/claro_hogar_y_recibos_moviles/paga_con_tarjeta/paso_02v2.png";
+  import paga_con_tarjeta_paso_03 from "@/assets/claro_hogar_y_recibos_moviles/paga_con_tarjeta/paso_03v2.png";
+  import paga_con_tarjeta_paso_04 from "@/assets/claro_hogar_y_recibos_moviles/paga_con_tarjeta/paso_04v2.png";
+  import paga_con_tarjeta_paso_05 from "@/assets/claro_hogar_y_recibos_moviles/paga_con_tarjeta/paso_05v2.png";
   import historial_de_recibos_pagados_icon from "@/assets/visualizacion_de_recibos_pagados/icon_01.png";
-  import historial_de_recibos_pagados_paso_01 from "@/assets/visualizacion_de_recibos_pagados/historial_de_recibos_pagados/paso_01.png";
-  import historial_de_recibos_pagados_paso_02 from "@/assets/visualizacion_de_recibos_pagados/historial_de_recibos_pagados/paso_02.png";
-  import historial_de_recibos_pagados_paso_03 from "@/assets/visualizacion_de_recibos_pagados/historial_de_recibos_pagados/paso_03.png";
-  import historial_de_recibos_pagados_paso_04 from "@/assets/visualizacion_de_recibos_pagados/historial_de_recibos_pagados/paso_04.png";
+  import historial_de_recibos_pagados_paso_01 from "@/assets/visualizacion_de_recibos_pagados/historial_de_recibos_pagados/paso_01v2.png";
+  import historial_de_recibos_pagados_paso_02 from "@/assets/visualizacion_de_recibos_pagados/historial_de_recibos_pagados/paso_02v2.png";
+  import historial_de_recibos_pagados_paso_03 from "@/assets/visualizacion_de_recibos_pagados/historial_de_recibos_pagados/paso_03v2.png";
+  import historial_de_recibos_pagados_paso_04 from "@/assets/visualizacion_de_recibos_pagados/historial_de_recibos_pagados/paso_04v2.png";
   import afiliacion_al_débito_automatico_icon from "@/assets/debito_automático/icon_01.png";
-  import afiliacion_al_débito_automatico_paso_01 from "@/assets/debito_automático/afiliacion_al_débito_automatico/paso_01.png";
-  import afiliacion_al_débito_automatico_paso_02 from "@/assets/debito_automático/afiliacion_al_débito_automatico/paso_02.png";
-  import afiliacion_al_débito_automatico_paso_03 from "@/assets/debito_automático/afiliacion_al_débito_automatico/paso_03.png";
-  import afiliacion_al_débito_automatico_paso_04 from "@/assets/debito_automático/afiliacion_al_débito_automatico/paso_04.png";
-  import afiliacion_al_débito_automatico_paso_05 from "@/assets/debito_automático/afiliacion_al_débito_automatico/paso_05.png";
-  import afiliacion_al_débito_automatico_paso_06 from "@/assets/debito_automático/afiliacion_al_débito_automatico/paso_06.png";
-  import afiliacion_al_débito_automatico_paso_07 from "@/assets/debito_automático/afiliacion_al_débito_automatico/paso_07.png";
+  import afiliacion_al_débito_automatico_paso_01 from "@/assets/debito_automático/afiliacion_al_débito_automatico/paso_01v2.png";
+  import afiliacion_al_débito_automatico_paso_02 from "@/assets/debito_automático/afiliacion_al_débito_automatico/paso_02v2.png";
+  import afiliacion_al_débito_automatico_paso_03 from "@/assets/debito_automático/afiliacion_al_débito_automatico/paso_03v2.png";
+  import afiliacion_al_débito_automatico_paso_04 from "@/assets/debito_automático/afiliacion_al_débito_automatico/paso_04v2.png";
+  import afiliacion_al_débito_automatico_paso_05 from "@/assets/debito_automático/afiliacion_al_débito_automatico/paso_05v2.png";
+  import afiliacion_al_débito_automatico_paso_06 from "@/assets/debito_automático/afiliacion_al_débito_automatico/paso_06v2.png";
+  import afiliacion_al_débito_automatico_paso_07 from "@/assets/debito_automático/afiliacion_al_débito_automatico/paso_07v2.png";
   import actualizar_el_débito_automatico_icon from "@/assets/debito_automático/icon_02.png";
-  import actualizar_el_debito_automatico_paso_01 from "@/assets/debito_automático/actualizar_el_debito_automatico/paso_01.png";
-  import actualizar_el_debito_automatico_paso_02 from "@/assets/debito_automático/actualizar_el_debito_automatico/paso_02.png";
-  import actualizar_el_debito_automatico_paso_03 from "@/assets/debito_automático/actualizar_el_debito_automatico/paso_03.png";
-  import actualizar_el_debito_automatico_paso_04 from "@/assets/debito_automático/actualizar_el_debito_automatico/paso_04.png";
-  import actualizar_el_debito_automatico_paso_05 from "@/assets/debito_automático/actualizar_el_debito_automatico/paso_05.png";
+  import actualizar_el_debito_automatico_paso_01 from "@/assets/debito_automático/actualizar_el_debito_automatico/paso_01v2.png";
+  import actualizar_el_debito_automatico_paso_02 from "@/assets/debito_automático/actualizar_el_debito_automatico/paso_02v2.png";
+  import actualizar_el_debito_automatico_paso_03 from "@/assets/debito_automático/actualizar_el_debito_automatico/paso_03v2.png";
+  import actualizar_el_debito_automatico_paso_04 from "@/assets/debito_automático/actualizar_el_debito_automatico/paso_04v2.png";
+  import actualizar_el_debito_automatico_paso_05 from "@/assets/debito_automático/actualizar_el_debito_automatico/paso_05v2.png";
   import comprar_paquetes_icon from "@/assets/compra_de_paquetes_y_recargas/icon_01.png";
-  import comprar_paquetes_paso_01 from "@/assets/compra_de_paquetes_y_recargas/comprar_paquetes/paso_01.png";
-  import comprar_paquetes_paso_02 from "@/assets/compra_de_paquetes_y_recargas/comprar_paquetes/paso_02.png";
-  import comprar_paquetes_paso_03 from "@/assets/compra_de_paquetes_y_recargas/comprar_paquetes/paso_03.png";
-  import comprar_paquetes_paso_04 from "@/assets/compra_de_paquetes_y_recargas/comprar_paquetes/paso_04.png";
-  import comprar_paquetes_paso_05 from "@/assets/compra_de_paquetes_y_recargas/comprar_paquetes/paso_05.png";
-  import comprar_paquetes_paso_06 from "@/assets/compra_de_paquetes_y_recargas/comprar_paquetes/paso_06.png";
-  import comprar_paquetes_paso_07 from "@/assets/compra_de_paquetes_y_recargas/comprar_paquetes/paso_07.png";
+  import comprar_paquetes_paso_01 from "@/assets/compra_de_paquetes_y_recargas/comprar_paquetes/paso_01v2.png";
+  import comprar_paquetes_paso_02 from "@/assets/compra_de_paquetes_y_recargas/comprar_paquetes/paso_02v2.png";
+  import comprar_paquetes_paso_03 from "@/assets/compra_de_paquetes_y_recargas/comprar_paquetes/paso_03v2.png";
+  import comprar_paquetes_paso_04 from "@/assets/compra_de_paquetes_y_recargas/comprar_paquetes/paso_04v2.png";
+  import comprar_paquetes_paso_05 from "@/assets/compra_de_paquetes_y_recargas/comprar_paquetes/paso_05v2.png";
+  import comprar_paquetes_paso_06 from "@/assets/compra_de_paquetes_y_recargas/comprar_paquetes/paso_06v2.png";
+  import comprar_paquetes_paso_07 from "@/assets/compra_de_paquetes_y_recargas/comprar_paquetes/paso_07v2.png";
   import realizar_recargas_icon from "@/assets/compra_de_paquetes_y_recargas/icon_02.png";
-  import realizar_recargas_paso_01 from "@/assets/compra_de_paquetes_y_recargas/realizar_recargas/paso_01.png";
-  import realizar_recargas_paso_02 from "@/assets/compra_de_paquetes_y_recargas/realizar_recargas/paso_02.png";
-  import realizar_recargas_paso_03 from "@/assets/compra_de_paquetes_y_recargas/realizar_recargas/paso_03.png";
-  import realizar_recargas_paso_04 from "@/assets/compra_de_paquetes_y_recargas/realizar_recargas/paso_04.png";
-  import realizar_recargas_paso_05 from "@/assets/compra_de_paquetes_y_recargas/realizar_recargas/paso_05.png";
-  import realizar_recargas_paso_06 from "@/assets/compra_de_paquetes_y_recargas/realizar_recargas/paso_06.png";
-  import realizar_recargas_paso_07 from "@/assets/compra_de_paquetes_y_recargas/realizar_recargas/paso_07.png";
+  import realizar_recargas_paso_01 from "@/assets/compra_de_paquetes_y_recargas/realizar_recargas/paso_01v2.png";
+  import realizar_recargas_paso_02 from "@/assets/compra_de_paquetes_y_recargas/realizar_recargas/paso_02v2.png";
+  import realizar_recargas_paso_03 from "@/assets/compra_de_paquetes_y_recargas/realizar_recargas/paso_03v2.png";
+  import realizar_recargas_paso_04 from "@/assets/compra_de_paquetes_y_recargas/realizar_recargas/paso_04v2.png";
+  import realizar_recargas_paso_05 from "@/assets/compra_de_paquetes_y_recargas/realizar_recargas/paso_05v2.png";
+  import realizar_recargas_paso_06 from "@/assets/compra_de_paquetes_y_recargas/realizar_recargas/paso_06v2.png";
+  import realizar_recargas_paso_07 from "@/assets/compra_de_paquetes_y_recargas/realizar_recargas/paso_07v2.png";
   import consulta_consumos_icon from "@/assets/consulta_tu_plan_y_consumos/icon_01.png";
-  import consulta_consumos_paso_01 from "@/assets/consulta_tu_plan_y_consumos/consulta_consumos/paso_01.png";
-  import consulta_consumos_paso_02 from "@/assets/consulta_tu_plan_y_consumos/consulta_consumos/paso_02.png";
-  import consulta_consumos_paso_03 from "@/assets/consulta_tu_plan_y_consumos/consulta_consumos/paso_03.png";
-  import consulta_consumos_paso_04 from "@/assets/consulta_tu_plan_y_consumos/consulta_consumos/paso_04.png";
-  import consulta_consumos_paso_05 from "@/assets/consulta_tu_plan_y_consumos/consulta_consumos/paso_05.png";
+  import consulta_consumos_paso_01 from "@/assets/consulta_tu_plan_y_consumos/consulta_consumos/paso_01v2.png";
+  import consulta_consumos_paso_02 from "@/assets/consulta_tu_plan_y_consumos/consulta_consumos/paso_02v2.png";
+  import consulta_consumos_paso_03 from "@/assets/consulta_tu_plan_y_consumos/consulta_consumos/paso_03v2.png";
+  import consulta_consumos_paso_04 from "@/assets/consulta_tu_plan_y_consumos/consulta_consumos/paso_04v2.png";
+  import consulta_consumos_paso_05 from "@/assets/consulta_tu_plan_y_consumos/consulta_consumos/paso_05v2.png";
   import consulta_plan_icon from "@/assets/consulta_tu_plan_y_consumos/icon_02.png";
-  import consulta_plan_paso_01 from "@/assets/consulta_tu_plan_y_consumos/consulta_plan/paso_01.png";
-  import consulta_plan_paso_02 from "@/assets/consulta_tu_plan_y_consumos/consulta_plan/paso_02.png";
-  import consulta_plan_paso_03 from "@/assets/consulta_tu_plan_y_consumos/consulta_plan/paso_03.png";
-  import consulta_plan_paso_04 from "@/assets/consulta_tu_plan_y_consumos/consulta_plan/paso_04.png";
+  import consulta_plan_paso_01 from "@/assets/consulta_tu_plan_y_consumos/consulta_plan/paso_01v2.png";
+  import consulta_plan_paso_02 from "@/assets/consulta_tu_plan_y_consumos/consulta_plan/paso_02v2.png";
+  import consulta_plan_paso_03 from "@/assets/consulta_tu_plan_y_consumos/consulta_plan/paso_03v2.png";
+  import consulta_plan_paso_04 from "@/assets/consulta_tu_plan_y_consumos/consulta_plan/paso_04v2.png";
   import servicios_claro_hogar_icon from "@/assets/gestion_de_servicios_claro_hogar/icon_01.png";
-  import servicios_claro_hogar_paso_01 from "@/assets/gestion_de_servicios_claro_hogar/servicios_claro_hogar/paso_01.png";
-  import servicios_claro_hogar_paso_02 from "@/assets/gestion_de_servicios_claro_hogar/servicios_claro_hogar/paso_02.png";
-  import servicios_claro_hogar_paso_03 from "@/assets/gestion_de_servicios_claro_hogar/servicios_claro_hogar/paso_03.png";
-  import servicios_claro_hogar_paso_04 from "@/assets/gestion_de_servicios_claro_hogar/servicios_claro_hogar/paso_04.png";
-  
-  
+  import servicios_claro_hogar_paso_01 from "@/assets/gestion_de_servicios_claro_hogar/servicios_claro_hogar/paso_01v2.png";
+  import servicios_claro_hogar_paso_02 from "@/assets/gestion_de_servicios_claro_hogar/servicios_claro_hogar/paso_02v2.png";
+  import servicios_claro_hogar_paso_03 from "@/assets/gestion_de_servicios_claro_hogar/servicios_claro_hogar/paso_03v2.png";
+  import servicios_claro_hogar_paso_04 from "@/assets/gestion_de_servicios_claro_hogar/servicios_claro_hogar/paso_04v2.png";
+
   const categories = [
     {
       slug: "claro_hogar_y_recibos_moviles",
       name: "Claro Hogar y recibos móviles",
       subCategories: [
         {
-          slug: "paga_con_billetera_digital",
-          name: "Paga con billetera digital",
-          icon: paga_con_billetera_digital_icon.src,
-        },
-        {
           slug: "paga_con_tarjeta",
           name: "Paga con tarjeta",
           icon: paga_con_tarjeta_icon.src,
         },
+        /*
+        {
+          slug: "paga_con_billetera_digital",
+          name: "Paga con billetera digital",
+          icon: paga_con_billetera_digital_icon.src,
+        },*/
       ],
     },
     {
@@ -278,7 +363,7 @@ import "swiper/css/bundle";
           slug: "realizar_recargas",
           name: "Realizar recargas",
           icon: realizar_recargas_icon.src,
-        }
+        },
       ],
     },
     {
@@ -294,7 +379,7 @@ import "swiper/css/bundle";
           slug: "consulta_plan",
           name: "Consulta plan",
           icon: consulta_plan_icon.src,
-        }
+        },
       ],
     },
     {
@@ -304,270 +389,270 @@ import "swiper/css/bundle";
         {
           slug: "servicios_claro_hogar",
           name: "Servicios Claro Hogar",
-          icon: servicios_claro_hogar_icon.src
-        }
+          icon: servicios_claro_hogar_icon.src,
+        },
       ],
-    }
+    },
   ];
 
   // Estructura de datos más plana y organizada
   const dataTabs = {
-    "claro_hogar_y_recibos_moviles": {
-      "paga_con_billetera_digital": [
+    claro_hogar_y_recibos_moviles: {
+      paga_con_billetera_digital: [
         {
           text: `Ingresa a <strong>Mi Claro App</strong> en tu <strong>servicio postpago</strong> o <strong>Claro Hogar</strong> y selecciona el ícono <strong>Pagos</strong>.`,
-          image: paga_con_billetera_digital_paso_01.src
+          image: paga_con_billetera_digital_paso_01.src,
         },
         {
           text: `Elige el recibo en la pestaña <strong>Pendientes de pago</strong>, acepta los <strong>Términos y Condiciones</strong> y selecciona <strong>Pagar</strong>.`,
-          image: paga_con_billetera_digital_paso_02.src
+          image: paga_con_billetera_digital_paso_02.src,
         },
         {
           text: `Elige una <strong>Billetera digital</strong> como medio de pago y selecciona <strong>Continuar</strong>.`,
-          image: paga_con_billetera_digital_paso_03.src
+          image: paga_con_billetera_digital_paso_03.src,
         },
         {
           text: `Ingresa a la <strong>Billetera digital</strong> y selecciona <strong>Aprobar compras</strong>.`,
-          image: paga_con_billetera_digital_paso_04.src
+          image: paga_con_billetera_digital_paso_04.src,
         },
         {
           text: `Copia el <strong>Código de aprobación</strong> y regresa a <strong>Mi Claro App</strong>.`,
-          image: paga_con_billetera_digital_paso_05.src
+          image: paga_con_billetera_digital_paso_05.src,
         },
         {
           text: `En Mi Claro App, ingresa tu número afiliado a la <strong>Billetera digital</strong>, pega el <strong>código</strong> y confirma el pago.`,
-          image: paga_con_billetera_digital_paso_06.src
+          image: paga_con_billetera_digital_paso_06.src,
         },
         {
           text: `¡Listo! Verás el <strong>mensaje de pago exitoso</strong> y recibirás tu confirmación.`,
-          image: paga_con_billetera_digital_paso_07.src
-        }
+          image: paga_con_billetera_digital_paso_07.src,
+        },
       ],
-      "paga_con_tarjeta": [
+      paga_con_tarjeta: [
         {
           text: `Ingresa a <strong>Mi Claro App</strong> en tu <strong>servicio postpago</strong> o <strong>Claro Hogar</strong> y selecciona el ícono <strong>Pagos</strong>.`,
-          image: paga_con_tarjeta_paso_01.src
+          image: paga_con_tarjeta_paso_01.src,
         },
         {
           text: `Elige el recibo en la pestaña <strong>Pendientes de pago</strong>, acepta los <strong>Términos y Condiciones</strong> y selecciona <strong>Pagar</strong>.`,
-          image: paga_con_tarjeta_paso_02.src
+          image: paga_con_tarjeta_paso_02.src,
         },
         {
           text: `Elige <strong>Tarjeta de crédito o débito</strong> como medio de pago y selecciona <strong>Continuar</strong>.`,
-          image: paga_con_tarjeta_paso_03.src
+          image: paga_con_tarjeta_paso_03.src,
         },
         {
           text: `Ingresa los datos del <strong>titular de la tarjeta</strong>. Si deseas, elige la opción <strong>Recordar tarjeta</strong> y selecciona <strong>Pagar</strong>.`,
-          image: paga_con_tarjeta_paso_04.src
+          image: paga_con_tarjeta_paso_04.src,
         },
         {
           text: `¡Listo! Verás el mensaje de <strong>pago exitoso</strong> y recibirás tu confirmación.`,
-          image: paga_con_tarjeta_paso_05.src
-        }
-      ]
+          image: paga_con_tarjeta_paso_05.src,
+        },
+      ],
     },
-    "visualizacion_de_recibos_pagados": {
-      "historial_de_recibos_pagados": [
+    visualizacion_de_recibos_pagados: {
+      historial_de_recibos_pagados: [
         {
           text: `Ingresa a <strong>Mi Claro App</strong> en tu <strong>servicio postpago</strong> o <strong>Claro Hogar</strong> y selecciona el ícono <strong>Pagos</strong>.`,
-          image: historial_de_recibos_pagados_paso_01.src
+          image: historial_de_recibos_pagados_paso_01.src,
         },
         {
           text: `Ve a la pestaña <strong>Pagados</strong> para consultar tu historial de recibos.`,
-          image: historial_de_recibos_pagados_paso_02.src
+          image: historial_de_recibos_pagados_paso_02.src,
         },
         {
           text: `Elige descargar el recibo seleccionando el ícono <strong>Descargar</strong> en la pestaña <strong>Pagados</strong>.`,
-          image: historial_de_recibos_pagados_paso_03.src
+          image: historial_de_recibos_pagados_paso_03.src,
         },
         {
           text: `¡Listo! Una vez descargado el recibo, podrás ver el <strong>detalle completo</strong>.`,
-          image: historial_de_recibos_pagados_paso_04.src
-        }
-      ]
+          image: historial_de_recibos_pagados_paso_04.src,
+        },
+      ],
     },
-    "debito_automático" : {
-      "afiliacion_al_debito_automatico": [
+    debito_automático: {
+      afiliacion_al_debito_automatico: [
         {
           text: `Ingresa a Mi Claro App en tu <strong>servicio postpago</strong> o <strong>Claro Hogar</strong> y selecciona el ícono <strong>Pagos</strong>.`,
-          image: afiliacion_al_débito_automatico_paso_01.src
+          image: afiliacion_al_débito_automatico_paso_01.src,
         },
         {
           text: `Selecciona <strong>Afiliarte al débito automático</strong>, en la pestaña <strong>Pagos</strong>.`,
-          image: afiliacion_al_débito_automatico_paso_02.src
+          image: afiliacion_al_débito_automatico_paso_02.src,
         },
         {
           text: `Elige <strong>Afiliar Pagos</strong> al débito automático.`,
-          image: afiliacion_al_débito_automatico_paso_03.src
+          image: afiliacion_al_débito_automatico_paso_03.src,
         },
         {
           text: `Elige los recibos que deseas afiliar y selecciona <strong>Continuar</strong>.`,
-          image: afiliacion_al_débito_automatico_paso_04.src
+          image: afiliacion_al_débito_automatico_paso_04.src,
         },
         {
           text: `También tienes la opción de <strong>Establecer un monto máximo de débito</strong> y seleccionar <strong>Continuar</strong>. Una vez establecido el monto, no se podrá modificar más adelante.`,
-          image: afiliacion_al_débito_automatico_paso_05.src
+          image: afiliacion_al_débito_automatico_paso_05.src,
         },
         {
           text: `Ingresa los datos del <strong>titular de la tarjeta</strong> y selecciona <strong>Continuar</strong>.`,
-          image: afiliacion_al_débito_automatico_paso_06.src
+          image: afiliacion_al_débito_automatico_paso_06.src,
         },
         {
           text: `Acepta los <strong>Términos y condiciones</strong> y selecciona <strong>Confirmar afiliación</strong> y ¡listo!`,
-          image: afiliacion_al_débito_automatico_paso_07.src
-        }
+          image: afiliacion_al_débito_automatico_paso_07.src,
+        },
       ],
-      "actualizar_el_debito_automatico": [
+      actualizar_el_debito_automatico: [
         {
           text: `Ingresa a Mi Claro App en tu <strong>servicio postpago</strong> o <strong>Claro Hogar</strong> y selecciona el ícono <strong>Pagos</strong>.`,
-          image: actualizar_el_debito_automatico_paso_01.src
+          image: actualizar_el_debito_automatico_paso_01.src,
         },
         {
           text: `Selecciona <strong>Afiliarte al débito automático</strong>, en la pestaña <strong>Pendientes de pago</strong>.`,
-          image: actualizar_el_debito_automatico_paso_02.src
+          image: actualizar_el_debito_automatico_paso_02.src,
         },
         {
           text: `En <strong>Débito automático</strong> selecciona <strong>Actualizar Tarjeta</strong>.`,
-          image: actualizar_el_debito_automatico_paso_03.src
+          image: actualizar_el_debito_automatico_paso_03.src,
         },
         {
           text: `Ingresa los datos del <strong>titular de la tarjeta</strong>, selecciona <strong>Continuar</strong> y ¡listo! Con los datos de tu tarjeta actualizados siempre te mantendrás al día en tus pagos.`,
-          image: actualizar_el_debito_automatico_paso_04.src
+          image: actualizar_el_debito_automatico_paso_04.src,
         },
         {
           text: `En <strong>Débito automático</strong> también tienes la opción de cambiar <strong>Tus pagos afiliados</strong> de un monto máximo a elegir <strong>Cambiar a ilimitado</strong>.`,
-          image: actualizar_el_debito_automatico_paso_05.src
-        }
-      ]
+          image: actualizar_el_debito_automatico_paso_05.src,
+        },
+      ],
     },
-    "compra_de_paquetes_y_recargas": {
-      "comprar_paquetes": [
+    compra_de_paquetes_y_recargas: {
+      comprar_paquetes: [
         {
           text: "Ingresa a <strong>Mi Claro App</strong>, en tu servicio postpago y selecciona el ícono <strong>Compras</strong>.",
-          image: comprar_paquetes_paso_01.src
+          image: comprar_paquetes_paso_01.src,
         },
         {
           text: "Selecciona el tipo de <strong>paquete</strong> que necesitas.",
-          image: comprar_paquetes_paso_02.src
+          image: comprar_paquetes_paso_02.src,
         },
         {
           text: "Selecciona el mejor <strong>paquete</strong> para ti.",
-          image: comprar_paquetes_paso_03.src
+          image: comprar_paquetes_paso_03.src,
         },
         {
           text: "Elige <strong>Tarjeta de Crédito/Débito</strong> como <strong>método de pago</strong>.",
-          image: comprar_paquetes_paso_04.src
+          image: comprar_paquetes_paso_04.src,
         },
         {
           text: "Elige <strong>Tarjeta de crédito o débito</strong> como <strong>método de pago</strong> y selecciona <strong>Continuar</strong>. También tienes la opción de <strong>pagar con una billetera digital</strong>, revisa el tutorial para más información.",
-          image: comprar_paquetes_paso_05.src
+          image: comprar_paquetes_paso_05.src,
         },
         {
           text: "Ingresa los datos del <strong>titular de la tarjeta</strong>. Si deseas, elige la opción <strong>Recordar tarjeta</strong> y selecciona <strong>Pagar</strong>.",
-          image: comprar_paquetes_paso_06.src
+          image: comprar_paquetes_paso_06.src,
         },
         {
           text: "¡Listo! Verás el mensaje de <strong>pago exitoso</strong> y recibirás tu confirmación.",
-          image: comprar_paquetes_paso_07.src
-        }
+          image: comprar_paquetes_paso_07.src,
+        },
       ],
-      "realizar_recargas": [
+      realizar_recargas: [
         {
           text: "Ingresa a Mi Claro App, en tu <strong>servicio prepago</strong> y selecciona la opción <strong>Recargar saldo</strong>.",
-          image: realizar_recargas_paso_01.src
+          image: realizar_recargas_paso_01.src,
         },
         {
           text: "Ingresa o elige el monto a recargar y selecciona <strong>Confirmar</strong>.",
-          image: realizar_recargas_paso_02.src
+          image: realizar_recargas_paso_02.src,
         },
         {
           text: "En método de pago, elige pagar con <strong>Tarjeta de Crédito/Débito</strong>.",
-          image: realizar_recargas_paso_03.src
+          image: realizar_recargas_paso_03.src,
         },
         {
           text: "Acepta los <strong>Términos y condiciones</strong> y presiona <strong>Recargar</strong>.",
-          image: realizar_recargas_paso_04.src
+          image: realizar_recargas_paso_04.src,
         },
         {
           text: "Elige <strong>Tarjeta de crédito o débito</strong> como medio de pago y selecciona <strong>Continuar</strong>.También tienes la opción de <strong>pagar con una billetera digital</strong>, revisa el tutorial para más información.",
-          image: realizar_recargas_paso_05.src
+          image: realizar_recargas_paso_05.src,
         },
         {
           text: "Ingresa los datos del <strong>titular de la tarjeta</strong>. Si deseas, elige la opción <strong>Recordar tarjeta</strong> y selecciona <strong>Pagar</strong>.",
-          image: realizar_recargas_paso_06.src
+          image: realizar_recargas_paso_06.src,
         },
         {
           text: "¡Listo! Verás el mensaje de <strong>pago exitoso</strong> y recibirás tu confirmación.",
-          image: realizar_recargas_paso_07.src
-        }
-      ]
+          image: realizar_recargas_paso_07.src,
+        },
+      ],
     },
-    "consulta_tu_plan_y_consumos": {
-      "consulta_consumos": [
+    consulta_tu_plan_y_consumos: {
+      consulta_consumos: [
         {
           text: "Ingresa a <strong>Mi Claro App</strong>, en tu servicio postpago y selecciona la primera opción de <strong>Saldo disponible</strong>.",
-          image: consulta_consumos_paso_01.src
+          image: consulta_consumos_paso_01.src,
         },
         {
           text: "Selecciona <strong>Consumo de Gigas</strong> en Historial de tus consumos.",
-          image: consulta_consumos_paso_02.src
+          image: consulta_consumos_paso_02.src,
         },
         {
           text: "En <strong>Consumo de Gigas</strong>, podrás ver información sobre el consumo de tu plan base. Una vez visualizado, selecciona <strong>Atrás</strong> para volver.",
-          image: consulta_consumos_paso_03.src
+          image: consulta_consumos_paso_03.src,
         },
         {
           text: "Selecciona <strong>Compras y recargas</strong> en Historial de tus consumos.",
-          image: consulta_consumos_paso_04.src
+          image: consulta_consumos_paso_04.src,
         },
         {
           text: "¡Listo! Puedes visualizar tus <strong>compras realizadas</strong>.",
-          image: consulta_consumos_paso_05.src
-        }
+          image: consulta_consumos_paso_05.src,
+        },
       ],
-      "consulta_plan": [
+      consulta_plan: [
         {
           text: "Ingresa a Mi Claro App, en tu <strong>servicio postpago</strong> y selecciona la pestaña <strong>Plan</strong>.",
-          image: consulta_plan_paso_01.src
+          image: consulta_plan_paso_01.src,
         },
         {
           text: "Visualiza la <strong>información completa</strong> de tu plan contratado. Puedes seleccionar la opción de <strong>Cambio de plan</strong>.",
-          image: consulta_plan_paso_02.src
+          image: consulta_plan_paso_02.src,
         },
         {
           text: "Visualiza tu plan actual y el plan recomendado. Elige <strong>Seleccionar Plan</strong> para realizar el cambio. ",
-          image: consulta_plan_paso_03.src
+          image: consulta_plan_paso_03.src,
         },
         {
           text: "Revisa el detalle del Cambio de plan, selecciona <strong>Cambiar mi plan</strong> y ¡listo!",
-          image: consulta_plan_paso_04.src
-        }
-      ]
+          image: consulta_plan_paso_04.src,
+        },
+      ],
     },
-    "gestion_de_servicios_claro_hogar": {
-      "servicios_claro_hogar": [
+    gestion_de_servicios_claro_hogar: {
+      servicios_claro_hogar: [
         {
           text: "Ingresa a Mi Claro App, en tu <strong>servicio Claro Hogar</strong>, y selecciona <strong>Teléfono</strong>.",
-          image: servicios_claro_hogar_paso_01.src
+          image: servicios_claro_hogar_paso_01.src,
         },
         {
           text: "En Teléfono podrás ver información sobre el consumo y <strong>Detalles del servicio</strong>. Una vez visualizado, selecciona <strong>Atrás</strong> para volver.",
-          image: servicios_claro_hogar_paso_02.src
+          image: servicios_claro_hogar_paso_02.src,
         },
         {
           text: "Selecciona <strong>Ir a pagos</strong> para pagar tu recibo emitido, en la pestaña de Servicios.",
-          image: servicios_claro_hogar_paso_03.src
+          image: servicios_claro_hogar_paso_03.src,
         },
         {
           text: "Serás redirigido a la sección <strong>Pagos</strong>, donde podrás pagar tu recibo de <strong>Claro Hogar</strong>. Revisa el tutorial de <strong>Pago de recibos</strong> móviles para más información. ",
-          image: servicios_claro_hogar_paso_04.src
+          image: servicios_claro_hogar_paso_04.src,
         },
-      ]
-    }
+      ],
+    },
   };
 
   const templateButtonTab = (category, id, title, image) => {
-   return `<button 
+    return `<button 
       class="tab-button group flex items-center gap-2.5 p-4 md:p-5 md:py-3 text-left font-bold text-base md:text-lg text-[#6c6c6c] bg-transparent border-none cursor-pointer relative w-fit transition-all duration-500 hover:text-[#3c3c3c]"
       data-category="${category}"
       data-sub-category="${id}"
@@ -579,38 +664,40 @@ import "swiper/css/bundle";
       />
       <p class="text-sm md:text-base whitespace-nowrap">${title}</p>
       <div class="absolute bottom-0 left-0 right-0 w-full h-0.5 bg-gradient-to-r from-transparent via-[#b9b9b9] to-transparent group-[.active]:via-[#da291c] transition-all duration-500"></div>
-    </button>` 
-  }
+    </button>`;
+  };
 
   // Función para obtener parámetros de la URL actual
   const getUrlParameter = (name) => {
     const urlParams = new URLSearchParams(window.location.search);
     return urlParams.get(name);
-  }
+  };
   // Función para actualizar la URL sin recargar la página
   const updateUrlWithoutReload = (category, subCategory) => {
     const url = new URL(window.location.href);
-    
+
     if (category) {
-      url.searchParams.set('category_tab', category);
+      url.searchParams.set("category_tab", category);
     } else {
-      url.searchParams.delete('category_tab');
+      url.searchParams.delete("category_tab");
     }
-    
+
     if (subCategory) {
-      url.searchParams.set('subcategory_tab', subCategory);
+      url.searchParams.set("subcategory_tab", subCategory);
     } else {
-      url.searchParams.delete('subcategory_tab');
+      url.searchParams.delete("subcategory_tab");
     }
-    
+
     // Actualiza la URL sin recargar la página
-    window.history.pushState({ category, subCategory }, '', url.toString());
-  }
+    window.history.pushState({ category, subCategory }, "", url.toString());
+  };
 
   let tutorialSwiper;
   // Función para actualizar la imagen del tutorial
   function updateTutorialImage(imageSrc = null) {
-    const currentImage = document.querySelector('.tutorial-img') as HTMLImageElement;
+    const currentImage = document.querySelector(
+      ".tutorial-img"
+    ) as HTMLImageElement;
     if (currentImage && imageSrc) {
       currentImage.src = imageSrc;
     }
@@ -620,34 +707,34 @@ import "swiper/css/bundle";
   const generateSliderSwiper = (category, subCategory) => {
     // Acceso directo a los slides
     const slides = dataTabs[category]?.[subCategory];
-    
+
     // Si no hay slides, salir de la función
     if (!slides || !slides.length) return;
-    
+
     // Actualizar contador de pasos
-    const totalStepsEl = document.querySelector('.total-steps');
-    const currentStepEl = document.querySelector('.current-step');
+    const totalStepsEl = document.querySelector(".total-steps");
+    const currentStepEl = document.querySelector(".current-step");
     if (totalStepsEl) {
       totalStepsEl.textContent = slides.length.toString();
     }
     if (currentStepEl) {
-      currentStepEl.textContent = '1';
+      currentStepEl.textContent = "1";
     }
-    
+
     // Actualizar la imagen del primer paso
     if (slides.length > 0) {
       updateTutorialImage(slides[0].image);
     }
-    
+
     // Destruir el swiper existente si existe
     if (tutorialSwiper) {
       tutorialSwiper.destroy(true, true);
     }
-    
+
     // Reconstruir el contenedor del swiper
-    const swiperContainer = document.querySelector('.tutorial-swiper');
+    const swiperContainer = document.querySelector(".tutorial-swiper");
     if (!swiperContainer) return;
-    
+
     // Crear el HTML para los slides
     let swiperHTML = '<div class="swiper-wrapper">';
     slides.forEach((slideData) => {
@@ -661,23 +748,23 @@ import "swiper/css/bundle";
         </div>
       `;
     });
-    swiperHTML += '</div>';
-    
+    swiperHTML += "</div>";
+
     // Actualizar el HTML
     swiperContainer.innerHTML = swiperHTML;
-    
+
     // Inicializar un nuevo swiper
-    tutorialSwiper = new Swiper('.tutorial-swiper', {
+    tutorialSwiper = new Swiper(".tutorial-swiper", {
       slidesPerView: 1,
       spaceBetween: 30,
       loop: false,
       autoHeight: true,
       navigation: {
-        nextEl: '.swiper-button-next',
-        prevEl: '.swiper-button-prev',
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
       },
       pagination: {
-        el: '.tutorial-content .swiper-pagination',
+        el: ".tutorial-content .swiper-pagination",
         clickable: true,
       },
       // effect: 'fade',
@@ -685,89 +772,104 @@ import "swiper/css/bundle";
       //   crossFade: true
       // },
       on: {
-        slideChange: function() {
+        slideChange: function () {
           const activeIndex = this.activeIndex;
           if (slides[activeIndex]) {
             updateTutorialImage(slides[activeIndex].image);
           }
-          
-          const currentStepEl = document.querySelector('.current-step');
+
+          const currentStepEl = document.querySelector(".current-step");
           if (currentStepEl) {
             currentStepEl.textContent = (activeIndex + 1).toString();
           }
-        }
-      }
+        },
+      },
     });
   };
 
   const generateHeaderTabs = (category) => {
-    const tabsContainer = document.querySelector('.recibos-section .tabs-container .tabs-wrapper');
+    const tabsContainer = document.querySelector(
+      ".recibos-section .tabs-container .tabs-wrapper"
+    );
     if (!tabsContainer) return;
-    
-    let tabsHTML = '';
-    const categoryData = categories.find(cat => cat.slug === category);
+
+    let tabsHTML = "";
+    const categoryData = categories.find((cat) => cat.slug === category);
     if (!categoryData || categoryData.subCategories.length === 0) {
-      console.warn(`No se encontraron subcategorías para la categoría ${category}`);
+      console.warn(
+        `No se encontraron subcategorías para la categoría ${category}`
+      );
       return;
     }
-    
-    console.log({categoryData});
+
+    console.log({ categoryData });
     categoryData.subCategories.forEach((subCategory) => {
-      tabsHTML += templateButtonTab(category, subCategory.slug, subCategory.name, subCategory.icon);
+      tabsHTML += templateButtonTab(
+        category,
+        subCategory.slug,
+        subCategory.name,
+        subCategory.icon
+      );
     });
-    console.log(tabsHTML)
-    
+    console.log(tabsHTML);
+
     tabsContainer.innerHTML = tabsHTML;
-    document.querySelector(".claro-recibos__title").textContent = categoryData.name;
-    
+    document.querySelector(".claro-recibos__title").textContent =
+      categoryData.name;
+
     // Inicializar los botones de tabs
-    const tabButtons = document.querySelectorAll('.recibos-section .tabs-container .tab-button');
-    tabButtons.forEach(button => {
-      button.addEventListener('click', function() {
-        tabButtons.forEach(btn => btn.classList.remove('active'));
-        this.classList.add('active');
-        const category = this.getAttribute('data-category');
-        const subCategory = this.getAttribute('data-sub-category');
+    const tabButtons = document.querySelectorAll(
+      ".recibos-section .tabs-container .tab-button"
+    );
+    tabButtons.forEach((button) => {
+      button.addEventListener("click", function () {
+        tabButtons.forEach((btn) => btn.classList.remove("active"));
+        this.classList.add("active");
+        const category = this.getAttribute("data-category");
+        const subCategory = this.getAttribute("data-sub-category");
         // Actualizar URL sin recargar
         updateUrlWithoutReload(category, subCategory);
         generateSliderSwiper(category, subCategory);
       });
     });
   };
-  
 
-  document.addEventListener('DOMContentLoaded', function() {   
+  document.addEventListener("DOMContentLoaded", function () {
     // Inicializar Swiper
-    tutorialSwiper = new Swiper('.tutorial-swiper', { });
+    tutorialSwiper = new Swiper(".tutorial-swiper", {});
     setTimeout(() => {
       // Inicializar desde la URL actual al cargar la página
-      const initialCategory = getUrlParameter('category_tab');
-      const initialSubCategory = getUrlParameter('subcategory_tab');
-      const btnBack = document.querySelector('.claro-recibos_back');
+      const initialCategory = getUrlParameter("category_tab");
+      const initialSubCategory = getUrlParameter("subcategory_tab");
+      const btnBack = document.querySelector(".claro-recibos_back");
       if (btnBack) {
-        btnBack.addEventListener('click', function() {
+        btnBack.addEventListener("click", function () {
           const mainSections = document.querySelectorAll(".main_section");
           const internSections = document.querySelectorAll(".detail_intern");
-          mainSections.forEach(section => section.classList.remove("hidden"));
-          internSections.forEach(section => section.classList.add("hidden"));
+          mainSections.forEach((section) => section.classList.remove("hidden"));
+          internSections.forEach((section) => section.classList.add("hidden"));
           updateUrlWithoutReload(null, null);
         });
       }
       if (initialCategory && initialSubCategory) {
         generateHeaderTabs(initialCategory);
         // Event listeners para los botones de tabs
-        const tabButtons = document.querySelectorAll('.recibos-section .tabs-container .tab-button');
+        const tabButtons = document.querySelectorAll(
+          ".recibos-section .tabs-container .tab-button"
+        );
         // Activar el botón correspondiente
-        tabButtons.forEach(btn => {
-          if (btn.getAttribute('data-category') === initialCategory && 
-              btn.getAttribute('data-sub-category') === initialSubCategory) {
-            btn.classList.add('active');
+        tabButtons.forEach((btn) => {
+          if (
+            btn.getAttribute("data-category") === initialCategory &&
+            btn.getAttribute("data-sub-category") === initialSubCategory
+          ) {
+            btn.classList.add("active");
           }
         });
         const mainSections = document.querySelectorAll(".main_section");
         const internSections = document.querySelectorAll(".detail_intern");
-        mainSections.forEach(section => section.classList.add("hidden"));
-        internSections.forEach(section => section.classList.remove("hidden"));
+        mainSections.forEach((section) => section.classList.add("hidden"));
+        internSections.forEach((section) => section.classList.remove("hidden"));
         console.log(initialCategory, initialSubCategory);
         // Inicializar el slider
         generateSliderSwiper(initialCategory, initialSubCategory);
@@ -775,44 +877,52 @@ import "swiper/css/bundle";
     }, 500);
   });
 
-  window.addEventListener('popstate', function(event) {
+  window.addEventListener("popstate", function (event) {
     if (event.state) {
       const { category, subCategory } = event.state;
-      const tabButtons = document.querySelectorAll('.recibos-section .tabs-container .tab-button');
+      const tabButtons = document.querySelectorAll(
+        ".recibos-section .tabs-container .tab-button"
+      );
       // Activar el botón correspondiente
-      tabButtons.forEach(btn => {
-        btn.classList.remove('active');
-        if (btn.getAttribute('data-category') === category && 
-            btn.getAttribute('data-sub-category') === subCategory) {
-          btn.classList.add('active');
+      tabButtons.forEach((btn) => {
+        btn.classList.remove("active");
+        if (
+          btn.getAttribute("data-category") === category &&
+          btn.getAttribute("data-sub-category") === subCategory
+        ) {
+          btn.classList.add("active");
         }
       });
       // Generar slider con los parámetros del estado
       generateSliderSwiper(category, subCategory);
     } else {
-      console.log('No hay estado');
+      console.log("No hay estado");
       // Si no hay estado (ej: primera carga), usar valores por defecto o de URL
       const mainSections = document.querySelectorAll(".main_section");
       const internSections = document.querySelectorAll(".detail_intern");
-      mainSections.forEach(section => section.classList.remove("hidden"));
-      internSections.forEach(section => section.classList.add("hidden"));
+      mainSections.forEach((section) => section.classList.remove("hidden"));
+      internSections.forEach((section) => section.classList.add("hidden"));
     }
   });
 
-  document.addEventListener('categoryChanged', function(e: CustomEvent) {
+  document.addEventListener("categoryChanged", function (e: CustomEvent) {
     const { category, subCategory } = e.detail;
     generateHeaderTabs(category);
     // Activar el botón correspondiente
-    const tabButtons = document.querySelectorAll('.recibos-section .tabs-container .tab-button');
-    tabButtons.forEach(btn => {
-      btn.classList.remove('active');
-      if (btn.getAttribute('data-category') === category && btn.getAttribute('data-sub-category') === subCategory) {
-        btn.classList.add('active');
+    const tabButtons = document.querySelectorAll(
+      ".recibos-section .tabs-container .tab-button"
+    );
+    tabButtons.forEach((btn) => {
+      btn.classList.remove("active");
+      if (
+        btn.getAttribute("data-category") === category &&
+        btn.getAttribute("data-sub-category") === subCategory
+      ) {
+        btn.classList.add("active");
       }
     });
 
     // Generar slider
     generateSliderSwiper(category, subCategory);
   });
-
 </script>

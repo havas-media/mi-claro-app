@@ -18,7 +18,11 @@
         preguntas frecuentes. Si no encuentras la respuesta que buscas, visita
         nuestra sección de ayuda, donde estaremos encantados de asistirte.
       </p>
-      <a class="btn-help hover:bg-claro hover:border-claro hover:text-white" href="https://www.claro.com.pe/personas/centro-de-ayuda/">Ir a Sección de Ayuda</a>
+      <a
+        class="btn-help hover:bg-claro hover:border-claro hover:text-white"
+        href="https://www.claro.com.pe/personas/centro-de-ayuda/"
+        >Ir a Sección de Ayuda</a
+      >
     </div>
     <div class="part2">
       <div class="items">
@@ -83,11 +87,10 @@
           <div class="info">
             <p>
               Desde Mi Claro App puedes pagar tus recibos de forma rápida y
-              segura. Solo ingresa a la sección <strong>“Pagos”</strong>,
+              segura. Solo ingresa a la sección <strong>“Pagos”</strong>,
               selecciona el recibo pendiente y elige tu método de pago (tarjeta
-              de débito y crédito o pago con billetera digital). Una vez
-              confirmada la operación, recibirás una constancia de pago en la
-              app y por correo electrónico.
+              de débito o crédito). Una vez confirmada la operación, recibirás
+              una constancia de pago en la app y por correo electrónico.
             </p>
           </div>
         </div>
@@ -109,11 +112,11 @@
           </div>
           <div class="info">
             <p>
-              En la sección <strong>“Recibos”</strong> de Mi Claro App podrás
-              visualizar el historial de tus <strong>últimos 6 recibos</strong>.
-              Cada uno incluye el monto, la fecha de emisión y el estado de
-              pago. También puedes descargar el recibo en formato PDF para
-              guardarlo o consultarlo cuando lo necesites.
+              En la sección <strong>“Recibos”</strong> de Mi Claro App podrás visualizar
+              el historial de tus <strong>últimos 6 recibos</strong>. Cada uno
+              incluye el monto, la fecha de emisión y el estado de pago. También
+              puedes descargar el recibo en formato PDF para guardarlo o
+              consultarlo cuando lo necesites.
             </p>
           </div>
         </div>
@@ -451,7 +454,7 @@
       cabecera.addEventListener("keydown", (e: KeyboardEvent) => {
         if (e.key === "Enter" || e.key === " ") {
           e.preventDefault();
-          item.dispatchEvent(new MouseEvent('click'));
+          item.dispatchEvent(new MouseEvent("click"));
         }
       });
     }

@@ -29,8 +29,10 @@
 
     <div class="about-description_links">
       <a
-        class="btn-link" href="#"
-        data-category="consulta_tu_plan_y_consumos" data-sub-category="consulta_consumos"
+        class="btn-link"
+        href="#"
+        data-category="consulta_tu_plan_y_consumos"
+        data-sub-category="consulta_consumos"
       >
         <img
           src="https://www.claro.com.pe/assets/havas/claro-app/assets/consulta.png"
@@ -48,7 +50,8 @@
       <a
         class="btn-link"
         href="#"
-        data-category="compra_de_paquetes_y_recargas" data-sub-category="comprar_paquetes"
+        data-category="compra_de_paquetes_y_recargas"
+        data-sub-category="comprar_paquetes"
       >
         <img
           src="https://www.claro.com.pe/assets/havas/claro-app/assets/carrito.png"
@@ -66,7 +69,8 @@
       <a
         class="btn-link"
         href="#"
-        data-category="claro_hogar_y_recibos_moviles" data-sub-category="paga_con_billetera_digital"
+        data-category="claro_hogar_y_recibos_moviles"
+        data-sub-category="paga_con_tarjeta"
       >
         <img
           src="https://www.claro.com.pe/assets/havas/claro-app/assets/recibos.png"
@@ -84,7 +88,8 @@
       <a
         class="btn-link"
         href="#"
-        data-category="debito_automático" data-sub-category="afiliacion_al_debito_automatico"
+        data-category="debito_automático"
+        data-sub-category="afiliacion_al_debito_automatico"
       >
         <img
           src="https://www.claro.com.pe/assets/havas/claro-app/assets/afiliate.png"
@@ -99,8 +104,11 @@
             stroke-linejoin="round"></path>
         </svg>
       </a>
-      <a class="btn-link" href="#"
-        data-category="gestion_de_servicios_claro_hogar" data-sub-category="servicios_claro_hogar"
+      <a
+        class="btn-link"
+        href="#"
+        data-category="gestion_de_servicios_claro_hogar"
+        data-sub-category="servicios_claro_hogar"
       >
         <img
           src="https://www.claro.com.pe/assets/havas/claro-app/assets/home.png"
@@ -115,8 +123,11 @@
             stroke-linejoin="round"></path>
         </svg>
       </a>
-      <a class="btn-link" href="#"
-        data-category="visualizacion_de_recibos_pagados" data-sub-category="historial_de_recibos_pagados"
+      <a
+        class="btn-link"
+        href="#"
+        data-category="visualizacion_de_recibos_pagados"
+        data-sub-category="historial_de_recibos_pagados"
       >
         <img
           src="https://www.claro.com.pe/assets/havas/claro-app/assets/visualizacion-recibos.png"
@@ -266,7 +277,7 @@
     font-size: 16px;
     text-decoration: none;
   }
-  .about .about-description .btn-about:hover{
+  .about .about-description .btn-about:hover {
     transform: translateY(-3px);
   }
 
@@ -339,44 +350,42 @@
   /*#endregion */
 </style>
 
-
 <script>
   const sectionQueEs = document.querySelector(".about");
   const btnsActions = sectionQueEs.querySelectorAll(".btn-link");
   const mainSections = document.querySelectorAll(".main_section");
   const internSections = document.querySelectorAll(".detail_intern");
-  btnsActions.forEach(btn => {
+  btnsActions.forEach((btn) => {
     btn.addEventListener("click", (e) => {
       e.preventDefault();
-      const category = btn.getAttribute('data-category');
-      const subCategory = btn.getAttribute('data-sub-category');
-      mainSections.forEach(section => section.classList.add("hidden"));
-      internSections.forEach(section => section.classList.remove("hidden"));
+      const category = btn.getAttribute("data-category");
+      const subCategory = btn.getAttribute("data-sub-category");
+      mainSections.forEach((section) => section.classList.add("hidden"));
+      internSections.forEach((section) => section.classList.remove("hidden"));
       // Actualizar la URL sin recargar
       const url = new URL(window.location.href);
-      url.searchParams.set('category_tab', category);
+      url.searchParams.set("category_tab", category);
       if (subCategory) {
-        url.searchParams.set('subcategory_tab', subCategory);
+        url.searchParams.set("subcategory_tab", subCategory);
       } else {
-        url.searchParams.delete('subcategory_tab');
+        url.searchParams.delete("subcategory_tab");
       }
-      
+
       // Actualizar la URL sin recargar la página
-      window.history.pushState({ category, subCategory }, '', url.toString());
-      
+      window.history.pushState({ category, subCategory }, "", url.toString());
+
       // Disparar un evento personalizado para notificar al componente InternaClaroApp
-      const event = new CustomEvent('categoryChanged', {
-        detail: { category, subCategory }
+      const event = new CustomEvent("categoryChanged", {
+        detail: { category, subCategory },
       });
       document.dispatchEvent(event);
-      //Hacer scrollTo 
+      //Hacer scrollTo
       setTimeout(() => {
         window.scrollTo({
           top: 0,
-          behavior: 'smooth'
+          behavior: "smooth",
         });
       }, 250);
     });
   });
-  
 </script>
