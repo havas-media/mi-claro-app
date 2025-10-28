@@ -718,7 +718,6 @@ import "swiper/css/bundle";
   const generateSliderSwiper = (category, subCategory) => {
     // Acceso directo a los slides
     const slides = dataTabs[category]?.[subCategory];
-
     // Si no hay slides, salir de la función
     if (!slides || !slides.length) return;
 
@@ -812,7 +811,10 @@ import "swiper/css/bundle";
       );
       return;
     }
-
+    if (categoryData.subCategories.length <= 1) {
+      //Si solo tiene una subcategoria, centrar el tab
+      tabsContainer.parentElement.classList.add("justify-center");
+    }
     console.log({ categoryData });
     categoryData.subCategories.forEach((subCategory) => {
       tabsHTML += templateButtonTab(
@@ -822,7 +824,6 @@ import "swiper/css/bundle";
         subCategory.icon
       );
     });
-    console.log(tabsHTML);
 
     tabsContainer.innerHTML = tabsHTML;
     document.querySelector(".claro-recibos__title").textContent =
